@@ -1,0 +1,21 @@
+{
+  "name": "dashboard-project",
+  "version": "1.0.0",
+  "description": "this is education repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonBystryakov/dashboard-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonBystryakov/dashboard-project/issues"
+  },
+  "homepage": "https://github.com/AntonBystryakov/dashboard-project#readme"
+}
