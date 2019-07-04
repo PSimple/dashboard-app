@@ -17,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/AntonBystryakov/dashboard-project/issues"
   },
-  "homepage": "https://github.com/AntonBystryakov/dashboard-project#readme"
+  "homepage": "https://github.com/AntonBystryakov/dashboard-project#readme",
+  "dependencies": {
+    "autoprefixer": "^9.6.0",
+    "postcss-preset-env": "^6.6.0",
+    "precss": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "postcss-modules": "^1.4.1"
+  }
 }
