@@ -1,3 +1,39 @@
-.main {
-  color: red;
+@import "./normalize.css";
+
+.header {
+  &_wrapper {
+    width: 1140px;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+  }
+  button {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+  }
+  &_rightside {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+  &_messages-button {
+    background: url('./img/message.svg') no-repeat center;
+  }
+  &_notifications-button {
+    background: url('./img/notification.svg') no-repeat center;
+  }
+  &_grid-button {
+    background: url('./img/grid.svg') no-repeat center;
+  }
+  &_menu-toggle-button {
+    background: url('./img/menu.svg') no-repeat center;
+  }
+  &_profile {
+    cursor: pointer;
+  }
 }
