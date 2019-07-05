@@ -28,6 +28,7 @@ nav {
       margin-right: 30px;
       position: relative;
     }
+
     & :last-child {
       margin-right: 0;
     }
@@ -90,6 +91,7 @@ footer {
 
 .header {
   color: var(--alto);
+
   &_wrapper {
     width: var(--default-width);
     height: 75px;
@@ -98,6 +100,7 @@ footer {
     margin: 0 auto;
     align-items: center;
   }
+
   button {
     width: 25px;
     height: 25px;
@@ -105,34 +108,42 @@ footer {
     border: 0;
     cursor: pointer;
   }
+
   &_rightside {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 30%;
   }
+
   &_leftside {
     display: flex;
     justify-content: space-between;
   }
+
   &_messages-button {
     background: url('../img/message.svg') no-repeat center;
   }
+
   &_notifications-button {
     background: url('../img/notification.svg') no-repeat center;
   }
+
   &_grid-button {
     background: url('../img/grid.svg') no-repeat center;
   }
+
   &_menu-toggle-button {
     background: url('../img/menu.svg') no-repeat center;
     margin-left: 60px;
   }
+
   &_profile {
     cursor: pointer;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     > span {
       padding: 0 10px 0 5px;
     }
@@ -144,6 +155,7 @@ footer {
     display: inline-block;
     position: relative;
     margin: 0 3px;
+
     &:after, 
     &:before {
       content: '';
@@ -155,20 +167,24 @@ footer {
       display: inline-block;
       transition: all .2s ease;
     }
+    
     &:after {
       left: 0;
       transform: rotate(45deg);
     }
+
     &:before {
       right: 0;
       transform: rotate(-45deg);
     }
   }
+
   &:hover .arrow {
     &:after {
       left: 0;
       transform: rotate(-45deg);
     }
+
     &:before {
       right: 0;
       transform: rotate(45deg);
@@ -180,16 +196,20 @@ footer {
   height: 66px;
   width: var(--default-width);
   margin: 48px auto 36px;
-  header {
+  border-bottom: 1px solid rgba(66,75,95,0.38);
+
+  & header {
     display: flex;
     justify-content: space-between;
   }
+
   h1 {
     font-size: 24px;
     color: #97A4BA;
     letter-spacing: 0;
     font-weight: 400;
     margin: 0;
+
     span {
       font-size: 12px;
       color: #67758D;
@@ -199,6 +219,7 @@ footer {
       margin-bottom: 10px;
     }
   }
+
   & .breadcrumbs {
     margin: 29px 0 0;
     padding: 0;
@@ -210,6 +231,7 @@ footer {
     text-align: right;
     font-weight: 100;
     text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+
     li {
       a:hover {
         color: var(--link-color);
