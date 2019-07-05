@@ -1,7 +1,13 @@
 :root {
     --default-width: 1140px;
-    --main-bg: #212938;
-    --nav-bg: #0B5289;
-    --link-color: #D8D8D8;
     --img-folder: '../img/';
+    --ebony-clay: #212938;
+    --venice-blue: #0B5289;
+    --alto: #D8D8D8;
+    --ebony-clay-light: #283040;
+    --slate-gray: #67758D;
+    --polo-blue: #81ACCD;
+    --hawkes-blue: #D1EAFC;
+    --pattens-blue: #D4EDFF;
+    --catalina-blue: #094370;
 }
