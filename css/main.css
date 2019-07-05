@@ -1,4 +1,5 @@
 @import "./normalize.css";
+@import "./variables.css";
 
 body {
   font-family: Helvetica;
@@ -6,13 +7,13 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #212938;
+  background-color: var(--main-bg);
 }
 
 nav {
   height: 60px;
   width: 100%;
-  background-color: #0B5289;
+  background-color: var(--nav-bg);
 }
 
 a {
@@ -35,7 +36,7 @@ footer {
   justify-content: center; 
 
   & .content {
-    width: 1140px;
+    width: var(--default-width);
     display: flex;
     justify-content: space-between; 
     & a {
@@ -56,8 +57,9 @@ footer {
 }
 
 .header {
+  color: var(--link-color);
   &_wrapper {
-    width: 1140px;
+    width: var(--default-width);
     height: 75px;
     display: flex;
     justify-content: space-between;
@@ -77,16 +79,16 @@ footer {
     width: 30%;
   }
   &_messages-button {
-    background: url('./img/message.svg') no-repeat center;
+    background: url('../img/message.svg') no-repeat center;
   }
   &_notifications-button {
-    background: url('./img/notification.svg') no-repeat center;
+    background: url('../img/notification.svg') no-repeat center;
   }
   &_grid-button {
-    background: url('./img/grid.svg') no-repeat center;
+    background: url('../img/grid.svg') no-repeat center;
   }
   &_menu-toggle-button {
-    background: url('./img/menu.svg') no-repeat center;
+    background: url('../img/menu.svg') no-repeat center;
   }
   &_profile {
     cursor: pointer;

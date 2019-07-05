@@ -1,0 +1,7 @@
+:root {
+    --default-width: 1140px;
+    --main-bg: #212938;
+    --nav-bg: #0B5289;
+    --link-color: #D8D8D8;
+    --img-folder: '../img/';
+}
