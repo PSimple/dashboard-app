@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="26px" viewBox="0 0 62 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Lint-Dashboard-Dark" transform="translate(-149.000000, -27.000000)">
+            <g id="Navbar">
+                <g id="logo" transform="translate(147.000000, 20.000000)">
+                    <text id="Lint" font-family="Helvetica" font-size="28" font-weight="normal" fill="#D1EAFC">
+                        <tspan x="6.85546875" y="28">Lint</tspan>
+                    </text>
+                    <circle id="Oval" fill="#35C4D6" cx="59" cy="28" r="5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

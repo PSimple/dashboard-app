@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="14px" viewBox="0 0 20 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>menu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Lint-Dashboard-Dark" transform="translate(-270.000000, -31.000000)" fill="#424B5F">
+            <g id="Navbar">
+                <g id="menu" transform="translate(270.000000, 31.000000)">
+                    <path d="M18.8105727,0 L1.18942731,0 C0.528634361,0 0,0.444444444 0,1 C0,1.55555556 0.528634361,2 1.18942731,2 L18.8105727,2 C19.4713656,2 20,1.55555556 20,1 C20,0.444444444 19.4625551,0 18.8105727,0 Z" id="Path"></path>
+                    <path d="M18.8105727,6 L1.18942731,6 C0.528634361,6 0,6.44444444 0,7 C0,7.55555556 0.528634361,8 1.18942731,8 L18.8105727,8 C19.4713656,8 20,7.55555556 20,7 C20,6.44444444 19.4625551,6 18.8105727,6 Z" id="Path"></path>
+                    <path d="M18.8105727,12 L1.18942731,12 C0.528634361,12 0,12.4444444 0,13 C0,13.5555556 0.528634361,14 1.18942731,14 L18.8105727,14 C19.4713656,14 20,13.5555556 20,13 C20,12.4444444 19.4625551,12 18.8105727,12 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

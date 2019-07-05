@@ -6,5 +6,6 @@
     },
     "postcss-preset-env": {},
     "precss": {},
+    "postcss-import": {}
   }
 }
