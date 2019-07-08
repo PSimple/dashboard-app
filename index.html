@@ -4,7 +4,7 @@
       <link rel="stylesheet" type="text/css" href="./css/main.css">
       <script src="./js/main.js"></script>
   </head>
-<body>
+<body class="body">
   <header class="header">
     <div class="header__wrapper">
       <div class="header__leftside">
@@ -23,13 +23,13 @@
       </div>
     </div>
   </header>
-  <nav>
-    <section class="content">
-      <a class="checked" href="#">Dashboard</a>
-      <a href="#">Projects</a>
-      <a href="#">Invoices</a>
-      <a href="#">Documents</a>
-      <a href="#">Settings</a>
+  <nav class="navigation">
+    <section class="navigation__content">
+      <a class="navigation__link navigation__link--checked" href="#">Dashboard</a>
+      <a class="navigation__link" href="#">Projects</a>
+      <a class="navigation__link" href="#">Invoices</a>
+      <a class="navigation__link" href="#">Documents</a>
+      <a class="navigation__link" href="#">Settings</a>
     </section>
   </nav>
   <main>
@@ -72,17 +72,19 @@
         </div>
       </div>
     </section>
+    <section class="projection">
+    </section>
   </main>
-  <footer>
-    <section class="content">
-      <div class="links-container">
-        <a href="#">Support</a>
-        <a href="#">Help Center</a>
-        <a href="#">Privacy</a>
-        <a href="#">Terms of Service</a>
+  <footer class="footer">
+    <section class="footer__content">
+      <div class="footer__links_container">
+        <a class="footer__link" href="#">Support</a>
+        <a class="footer__link" href="#">Help Center</a>
+        <a class="footer__link" href="#">Privacy</a>
+        <a class="footer__link" href="#">Terms of Service</a>
       </div>
-      <span class="description">
-        Lint, a FREE dashboard by <a href="#" class="author-link">Piksl</a>
+      <span class="footer__description">
+        Lint, a FREE dashboard by <a href="#" class="footer__author-link">Piksl</a>
       </span>
     </section>
   </footer>

@@ -1,6 +1,6 @@
 @import "./variables.css";
 
-body {
+.body {
   font-family: Helvetica;
   position: relative;
   margin: 0;
@@ -9,7 +9,7 @@ body {
   background-color: var(--ebony-clay);
 }
 
-nav {
+.navigation {
   height: 60px;
   width: 100%;
   background-image: linear-gradient(135deg, var(--venice-blue) 0%, var(--catalina-blue) 100%);
@@ -19,33 +19,31 @@ nav {
   align-content: center; 
   justify-content: center; 
 
-  & .content {
+  &__content {
     color: var(--polo-blue);
     width: var(--default-width);
-
-    & a {
-      margin-right: 30px;
-      position: relative;
-    }
 
     & :last-child {
       margin-right: 0;
     }
-
-    & .checked,
-    & a:hover {
-      color: var(--pattens-blue);
-      &::after {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 3px;
-        top: 36px;
-        left: calc(50% - 10px);
-        border-radius: 1.5px;
-        background-color: var(--hawkes-blue);
-      }
+  }
+  &--checked,
+  &__link:hover {
+    color: var(--pattens-blue);
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      top: 36px;
+      left: calc(50% - 10px);
+      border-radius: 1.5px;
+      background-color: var(--hawkes-blue);
     }
+  }
+  &__link{
+    margin-right: 30px;
+    position: relative;
   }
 }
 
@@ -54,7 +52,7 @@ a {
   color: inherit;
 }
 
-footer {
+.footer {
   position: relative;
   bottom: 0px;
   height: 84px;
@@ -68,23 +66,24 @@ footer {
   align-content: center; 
   justify-content: center; 
 
-  & .content {
+  &__content {
     width: var(--default-width);
     display: flex;
-    justify-content: space-between; 
-    & a {
-      margin-right: 30px;
-    }
+    justify-content: space-between;
+
     & :last-child {
       margin-right: 0;
-    } 
+    }
+  }
+  &__link {
+    margin-right: 30px;
   }
 
-  & .links-container {
+  &__links_container {
     display: inline-block;
   }
 
-  & .description .author-link {
+  &__description &__author-link {
     color: #3491F8;
   }
 }
@@ -113,8 +112,6 @@ footer {
     justify-content: space-between;
   }
 
-
-
   &__button {
     width: 25px;
     height: 25px;
@@ -126,11 +123,11 @@ footer {
       background: url('../img/message.svg') no-repeat center;
     }
 
-    &--notifications-button {
+    &--notifications {
       background: url('../img/notification.svg') no-repeat center;
     }
 
-    &--grid-button {
+    &--grid {
       background: url('../img/grid.svg') no-repeat center;
     }
 
@@ -339,12 +336,19 @@ footer {
       content: '';
       background-color: var(--dodger-blue);
       width: 72%;
-      height: 8px;      
+      height: 8px;
       border-radius: 4px;
       transition: 0.3s all linear;
       animation: progress 3s ease-in-out forwards;
     }
   }
+}
+
+.projection {
+  margin: 36px auto;
+  width: var(--default-width);
+  height: 449px;
+  background: url(../img/projection.svg);
 }
 
 @keyframes progress {
