@@ -1,4 +1,3 @@
-@import "./normalize.css";
 @import "./variables.css";
 
 body {
@@ -93,7 +92,7 @@ footer {
 .header {
   color: var(--alto);
 
-  &_wrapper {
+  &__wrapper {
     width: var(--default-width);
     height: 75px;
     display: flex;
@@ -102,93 +101,96 @@ footer {
     align-items: center;
   }
 
-  button {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    border: 0;
-    cursor: pointer;
-  }
-
-  &_rightside {
+  &__rightside {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 30%;
   }
 
-  &_leftside {
+  &__leftside {
     display: flex;
     justify-content: space-between;
   }
 
-  &_messages-button {
-    background: url('../img/message.svg') no-repeat center;
+
+
+  &__button {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+
+    &--messages {
+      background: url('../img/message.svg') no-repeat center;
+    }
+
+    &--notifications-button {
+      background: url('../img/notification.svg') no-repeat center;
+    }
+
+    &--grid-button {
+      background: url('../img/grid.svg') no-repeat center;
+    }
+
+    &--menu-toggle {
+      background: url('../img/menu.svg') no-repeat center;
+      margin-left: 60px;
+    }
   }
 
-  &_notifications-button {
-    background: url('../img/notification.svg') no-repeat center;
-  }
-
-  &_grid-button {
-    background: url('../img/grid.svg') no-repeat center;
-  }
-
-  &_menu-toggle-button {
-    background: url('../img/menu.svg') no-repeat center;
-    margin-left: 60px;
-  }
-
-  &_profile {
+  &__profile {
     cursor: pointer;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    > span {
+    &--title {
       padding: 0 10px 0 5px;
     }
-  }
-  .arrow {
-    font-size: 20px;
-    width: 12px;
-    height: 6px;
-    display: inline-block;
-    position: relative;
-    margin: 0 3px;
 
-    &:after, 
-    &:before {
-      content: '';
-      top: 3px;
-      position: absolute;
-      width: 7px;
-      height: 1px;
-      background-color: var(--gallery);
+    &--arrow {
+      font-size: 20px;
+      width: 12px;
+      height: 6px;
       display: inline-block;
-      transition: all .2s ease;
+      position: relative;
+      margin: 0 3px;
+  
+      &:after, 
+      &:before {
+        content: '';
+        top: 3px;
+        position: absolute;
+        width: 7px;
+        height: 1px;
+        background-color: var(--gallery);
+        display: inline-block;
+        transition: all .2s ease;
+      }
+      
+      &:after {
+        left: 0;
+        transform: rotate(45deg);
+      }
+  
+      &:before {
+        right: 0;
+        transform: rotate(-45deg);
+      }
     }
-    
-    &:after {
-      left: 0;
-      transform: rotate(45deg);
-    }
-
-    &:before {
-      right: 0;
-      transform: rotate(-45deg);
-    }
-  }
-
-  &:hover .arrow {
-    &:after {
-      left: 0;
-      transform: rotate(-45deg);
-    }
-
-    &:before {
-      right: 0;
-      transform: rotate(45deg);
+  
+    &:hover &--arrow {
+      &:after {
+        left: 0;
+        transform: rotate(-45deg);
+      }
+  
+      &:before {
+        right: 0;
+        transform: rotate(45deg);
+      }
     }
   }
 }
@@ -233,7 +235,7 @@ footer {
     font-weight: 100;
     /* text-shadow: 0 2px 4px rgba(0,0,0,0.50); */
 
-    li {
+    &__item {
       a:hover {
         color: var(--alto);
       }
@@ -248,7 +250,7 @@ footer {
   width: var(--default-width);
   column-gap: 28px;
  
-  &_item {
+  &__item {
     height: 102px;
     background-color: var(--ebony-clay-light);
     color: var(--gull-gray);
@@ -271,74 +273,85 @@ footer {
       transition: all .3s ease-in;
     }
 
-    &-title {
-      font-size: 14px;
-      display: block;
-      text-transform: uppercase;
-    }
-    
-    &-value {
-      font-size: 26px; /* 28px */
-      color: var(--blue-haze);
-      line-height: 26px; /* 28px */
-      display: inline-block;
-      margin-right: 15px;
-      vertical-align: middle;
-    }
-    
-    &-badge {
-      font-size: 14px; /* 16px */
-      color: var(--white);
-      line-height: 16px;
-      padding: 4px 10px;
-      display: inline-block;
-      font-weight: 200;
-      border-radius: 11.5px;
-      vertical-align: middle;
-    
-      &.bg-green {
-        background-color: var(--lima);
-      }
-    
-      &.bg-red {
-        background-color: var(--red-orange);
-      }
-    }
-    
-    &-progressbar {
-      width: 152px;
-      height: 8px;
-      border-radius: 4px;
-      background-color: var(--botticelli);
-      display: inline-block;
-      position: relative;
-      vertical-align: bottom;
-    
-      &:after {
-        display: inline-block;
-        position: absolute;
-        content: '';
-        background-color: var(--dodger-blue);
-        width: 72%;
-        height: 8px;      
-        border-radius: 4px;
-      }
-    }
-    
-    &.arrows {
+    &&--arrows {
       background-image: url('../img/widget_arrows.png');
     }
     
-    &.repair {
+    &&--repair {
       background-image: url('../img/widget_repair.png');
     }
     
-    &.clock {
+    &&--clock {
       background-image: url('../img/widget_clock.png');
     }
     
-    &.dollar {
+    &&--dollar {
       background-image: url('../img/widget_dollar.png');
     }
+  }
+
+  &__title {
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+  }
+  
+  &__value {
+    font-size: 26px; /* 28px */
+    color: var(__blue-haze);
+    line-height: 26px; /* 28px */
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+  }
+  
+  &__badge {
+    font-size: 14px; /* 16px */
+    color: var(--white);
+    line-height: 16px;
+    padding: 4px 10px;
+    display: inline-block;
+    font-weight: 200;
+    border-radius: 11.5px;
+    vertical-align: middle;
+  
+    &&--positive {
+      background-color: var(--lima);
+    }
+  
+    &&--negative {
+      background-color: var(--red-orange);
+    }
+  }
+  
+  &__progressbar {
+    width: 152px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--botticelli);
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+  
+    &:after {
+      display: inline-block;
+      position: absolute;
+      content: '';
+      background-color: var(--dodger-blue);
+      width: 72%;
+      height: 8px;      
+      border-radius: 4px;
+      transition: 0.3s all linear;
+      animation: progress 3s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 72%;
   }
 }

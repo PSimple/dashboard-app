@@ -6,18 +6,18 @@
   </head>
 <body>
   <header class="header">
-    <div class="header_wrapper">
-      <div class="header_leftside">
+    <div class="header__wrapper">
+      <div class="header__leftside">
         <a href="#" class="logo"><img src="./img/logo.svg" alt=""></a>
-        <button class="header_menu-toggle-button"></button>
+        <button class="header__button header__button--menu-toggle"></button>
       </div>
-      <div class="header_rightside">
-          <button class="header_messages-button"></button>
-          <button class="header_notifications-button"></button>
-          <button class="header_grid-button"></button>
-          <div class="header_profile">
-            <i class="icon_arrow-bottom arrow"></i>
-            <span>Luke Brown</span>  
+      <div class="header__rightside">
+          <button class="header__button header__button--messages"></button>
+          <button class="header__button header__button--notifications"></button>
+          <button class="header__button header__button--grid"></button>
+          <div class="header__profile">
+            <i class="header__profile--arrow"></i>
+            <span class="header__profile--title">Luke Brown</span>  
             <img src="./img/profile.png" alt="">
           </div>
       </div>
@@ -37,41 +37,40 @@
         <header>
           <h1><span>overview</span>Dashboard</h1>
           <ul class="breadcrumbs">
-            <li><a href="#">Lint</a></li>&nbsp;/&nbsp;
-            <li><a href="#">Dashboard</a></li>&nbsp;/&nbsp;
-            <li><a href="#">Overview</a></li>
+            <li class="breadcrumbs__item"><a href="#">Lint</a></li>&nbsp;/&nbsp;
+            <li class="breadcrumbs__item"><a href="#">Dashboard</a></li>&nbsp;/&nbsp;
+            <li class="breadcrumbs__item"><a href="#">Overview</a></li>
           </ul>
         </header>
     </section>
     <section class="small-widgets">
-      <div class="small-widgets_item dollar">
-        <span class="small-widgets_item-title">Budget</span>
+      <div class="small-widgets__item small-widgets__item--dollar">
+        <span class="small-widgets__title">Budget</span>
         <div>
-          <span class="small-widgets_item-value">$129,850</span>
-          <span class="small-widgets_item-badge bg-green">+15%</span>
+          <span class="small-widgets__value">$129,850</span>
+          <span class="small-widgets__badge small-widgets__badge--positive">+15%</span>
         </div>
       </div>
-      <div class="small-widgets_item repair">
-        <span class="small-widgets_item-title">OPERATIONS</span>
+      <div class="small-widgets__item small-widgets__item--repair">
+        <span class="small-widgets__title">OPERATIONS</span>
         <div>
-          <span class="small-widgets_item-value">15,000</span>
+          <span class="small-widgets__value">15,000</span>
         </div>
       </div>
-      <div class="small-widgets_item arrows">
-        <span class="small-widgets_item-title">REQUESTS</span>
+      <div class="small-widgets__item small-widgets__item--arrows">
+        <span class="small-widgets__title">REQUESTS</span>
         <div>
-          <span class="small-widgets_item-value">37,209</span>
-          <span class="small-widgets_item-badge bg-red">-21%</span>
+          <span class="small-widgets__value">37,209</span>
+          <span class="small-widgets__badge small-widgets__badge--negative">-21%</span>
         </div>
       </div>
-      <div class="small-widgets_item clock">
-        <span class="small-widgets_item-title">PROGRESS</span>
+      <div class="small-widgets__item small-widgets__item--clock">
+        <span class="small-widgets__title">PROGRESS</span>
         <div>
-          <span class="small-widgets_item-value">72%</span>
-          <span class="small-widgets_item-progressbar"></span>
+          <span class="small-widgets__value">72%</span>
+          <span class="small-widgets__progressbar"></span>
         </div>
       </div>
-      
     </section>
   </main>
   <footer>
