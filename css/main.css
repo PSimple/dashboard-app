@@ -1,3 +1,4 @@
+@import-normalize;
 @import "./variables.css";
 
 .body {
@@ -13,11 +14,11 @@
   height: 60px;
   width: 100%;
   background-image: linear-gradient(135deg, var(--venice-blue) 0%, var(--catalina-blue) 100%);
-  box-shadow: 0 3px 10px -8px rgba(0,0,0,0.24);
+  box-shadow: 0 3px 10px -8px rgba(0, 0, 0, 0.24);
   display: flex;
   align-items: center;
-  align-content: center; 
-  justify-content: center; 
+  align-content: center;
+  justify-content: center;
 
   &__content {
     color: var(--polo-blue);
@@ -30,6 +31,7 @@
   &--checked,
   &__link:hover {
     color: var(--pattens-blue);
+
     &::after {
       content: '';
       position: absolute;
@@ -63,8 +65,8 @@ a {
   letter-spacing: 0;
   display: flex;
   align-items: center;
-  align-content: center; 
-  justify-content: center; 
+  align-content: center;
+  justify-content: center;
 
   &__content {
     width: var(--default-width);
@@ -75,6 +77,7 @@ a {
       margin-right: 0;
     }
   }
+
   &__link {
     margin-right: 30px;
   }
@@ -154,8 +157,8 @@ a {
       display: inline-block;
       position: relative;
       margin: 0 3px;
-  
-      &:after, 
+
+      &:after,
       &:before {
         content: '';
         top: 3px;
@@ -166,24 +169,24 @@ a {
         display: inline-block;
         transition: all .2s ease;
       }
-      
+
       &:after {
         left: 0;
         transform: rotate(45deg);
       }
-  
+
       &:before {
         right: 0;
         transform: rotate(-45deg);
       }
     }
-  
+
     &:hover &--arrow {
       &:after {
         left: 0;
         transform: rotate(-45deg);
       }
-  
+
       &:before {
         right: 0;
         transform: rotate(45deg);
@@ -196,14 +199,14 @@ a {
   height: 66px;
   width: var(--default-width);
   margin: 48px auto 36px;
-  border-bottom: 1px solid rgba(66,75,95,0.38);
+  border-bottom: 1px solid rgba(66, 75, 95, 0.38);
 
   & header {
     display: flex;
     justify-content: space-between;
   }
 
-  h1 {
+  &__text {
     font-size: 24px;
     color: var(--gull-gray);
     letter-spacing: 0;
@@ -246,7 +249,7 @@ a {
   grid-template-columns: repeat(4, 1fr);
   width: var(--default-width);
   column-gap: 28px;
- 
+
   &__item {
     height: 102px;
     background-color: var(--ebony-clay-light);
@@ -261,27 +264,27 @@ a {
     flex-direction: column;
     align-items: baseline;
     flex-flow: column;
-    box-shadow: 0 5px 10px -10px rgba(0,0,0,0.50);
+    box-shadow: 0 5px 10px -10px rgba(0, 0, 0, 0.50);
     border-radius: 4px;
     transition: all .3s ease-out .1s;
 
     &:hover {
-      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.60);
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.60);
       transition: all .3s ease-in;
     }
 
     &&--arrows {
       background-image: url('../img/widget_arrows.png');
     }
-    
+
     &&--repair {
       background-image: url('../img/widget_repair.png');
     }
-    
+
     &&--clock {
       background-image: url('../img/widget_clock.png');
     }
-    
+
     &&--dollar {
       background-image: url('../img/widget_dollar.png');
     }
@@ -292,18 +295,21 @@ a {
     display: block;
     text-transform: uppercase;
   }
-  
+
   &__value {
-    font-size: 26px; /* 28px */
+    font-size: 26px;
+    /* 28px */
     color: var(__blue-haze);
-    line-height: 26px; /* 28px */
+    line-height: 26px;
+    /* 28px */
     display: inline-block;
     margin-right: 15px;
     vertical-align: middle;
   }
-  
+
   &__badge {
-    font-size: 14px; /* 16px */
+    font-size: 14px;
+    /* 16px */
     color: var(--white);
     line-height: 16px;
     padding: 4px 10px;
@@ -311,16 +317,16 @@ a {
     font-weight: 200;
     border-radius: 11.5px;
     vertical-align: middle;
-  
+
     &&--positive {
       background-color: var(--lima);
     }
-  
+
     &&--negative {
       background-color: var(--red-orange);
     }
   }
-  
+
   &__progressbar {
     width: 152px;
     height: 8px;
@@ -329,7 +335,7 @@ a {
     display: inline-block;
     position: relative;
     vertical-align: bottom;
-  
+
     &:after {
       display: inline-block;
       position: absolute;
@@ -347,14 +353,21 @@ a {
 .projection {
   margin: 36px auto;
   width: var(--default-width);
-  height: 449px;
+  box-shadow: 0 5px 10px -10px rgba(0, 0, 0, 0.50);
   background: url(../img/projection.svg);
+  height: 449px;
+
+  &:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.60);
+    transition: all .3s ease-in;
+  }
 }
 
 @keyframes progress {
   from {
     width: 0;
   }
+
   to {
     width: 72%;
   }
