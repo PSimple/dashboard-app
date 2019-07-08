@@ -1,13 +1,24 @@
 :root {
     --default-width: 1140px;
     --img-folder: '../img/';
-    --ebony-clay: #212938;
-    --venice-blue: #0B5289;
+   
+    --lima:#51C81C;
+    --red-orange: #FC381D;
+
+    --white: #FFFFFF;
+    --botticelli: #DEE5EF;
     --alto: #D8D8D8;
-    --ebony-clay-light: #283040;
+    --gallery: #EFEFEF;
+    --gull-gray: #97A4BA;
     --slate-gray: #67758D;
-    --polo-blue: #81ACCD;
+
     --hawkes-blue: #D1EAFC;
     --pattens-blue: #D4EDFF;
+    --blue-haze: #C4CFDD;
+    --dodger-blue: #3794FC;
+    --polo-blue: #81ACCD;
     --catalina-blue: #094370;
+    --venice-blue: #0B5289;
+    --ebony-clay: #212938;
+    --ebony-clay-light: #283040;
 }
