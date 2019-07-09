@@ -1,0 +1,56 @@
+
+<svg width="172px" height="109px" viewBox="0 0 172 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-1" points="-4.36543745e-14 96.1992883 3.47085202 27.9288256 58.6188341 0 106.439462 0 163.901345 32.9715302 172 67.8825623 162.744395 107.836299 127.650224 100.854093 39.3363229 99.3024911 1.88979976e-16 109"></polygon>
+        <ellipse id="path-3" cx="84.5" cy="90" rx="44.5" ry="45"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-24" y="-24" width="137" height="138">
+            <rect x="16" y="21" width="137" height="138" fill="white"></rect>
+            <use xlink:href="#path-3" fill="black"></use>
+        </mask>
+        <path d="M37.744092,11.5748031 C37.744092,11.5748031 58.1625399,1.89694698 71.6457313,0.771653543 C85.1289227,-0.353639894 111.711305,5.4015748 111.711305,5.4015748 L140.989994,38.5826772 L117.87524,51.7007874 L122.49819,92.5984252 L0.760485416,97.2283465 C0.760485416,97.2283465 7.56355415,58.2265143 13.8588461,37.8110236 C20.154138,17.3955329 37.744092,11.5748031 37.744092,11.5748031 Z" id="path-5"></path>
+        <path d="M78.0184588,118.525978 C102.699249,118.525978 122.706983,98.4880765 122.706983,73.7700724 C122.706983,49.0520683 102.699249,29.0141669 78.0184588,29.0141669 C53.3376682,29.0141669 33.3299342,49.0520683 33.3299342,73.7700724 C33.3299342,98.4880765 53.3376682,118.525978 78.0184588,118.525978 Z" id="path-7"></path>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-24" y="-24" width="137.377049" height="137.511811">
+            <rect x="9.32993419" y="5.0141669" width="137.377049" height="137.511811" fill="white"></rect>
+            <use xlink:href="#path-7" fill="black"></use>
+        </mask>
+        <path d="M84,130 C106.09139,130 124,112.09139 124,90 C124,67.90861 106.09139,50 84,50 C61.90861,50 44,67.90861 44,90 C44,112.09139 61.90861,130 84,130 Z" id="path-9"></path>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="80" height="80" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Lint-Dashboard-Dark" transform="translate(-1114.000000, -912.000000)">
+            <g id="Score-Card" transform="translate(1027.000000, 908.000000)">
+                <g id="chart" transform="translate(87.000000, 4.000000)">
+                    <g>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="mask" fill="#283040" xlink:href="#path-1"></use>
+                        <g id="external_dashes" stroke-dasharray="1.600000023841858,5" mask="url(#mask-2)" stroke="#DEE5EF" stroke-width="48">
+                            <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                        </g>
+                        <g id="colored" mask="url(#mask-2)">
+                            <g transform="translate(6.000000, 16.000000)">
+                                <mask id="mask-6" fill="white">
+                                    <use xlink:href="#path-5"></use>
+                                </mask>
+                                <use id="Mask" stroke="none" fill="#283040" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                <g id="color_dashes" stroke="none" fill="none" stroke-dasharray="1.600000023841858,5" mask="url(#mask-6)" stroke-width="48">
+                                    <use stroke="#37C4FC" mask="url(#mask-8)" xlink:href="#path-7"></use>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="inner_dashes" stroke-dasharray="1,4.799999713897705" mask="url(#mask-2)" stroke="#37C4FC" stroke-width="4">
+                            <use mask="url(#mask-10)" xlink:href="#path-9"></use>
+                        </g>
+                    </g>
+                    <text id="85%" font-family="Helvetica" font-size="24" font-weight="normal" fill="#37C4FC">
+                        <tspan x="73.1523438" y="90">85</tspan>
+                        <tspan x="75.8300781" y="119">%</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
