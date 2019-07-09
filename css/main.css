@@ -28,6 +28,7 @@
       margin-right: 0;
     }
   }
+
   &--checked,
   &__link:hover {
     color: var(--pattens-blue);
@@ -43,7 +44,8 @@
       background-color: var(--hawkes-blue);
     }
   }
-  &__link{
+
+  &__link {
     margin-right: 30px;
     position: relative;
   }
@@ -808,7 +810,7 @@ a {
       line-height: 38px;
 
       &:nth-child(odd) {
-        background: rgba(246,249,252,0.03);
+        background: rgba(246, 249, 252, 0.03);
       }
     }
 
@@ -856,10 +858,10 @@ a {
 .medium-widgets__banner {
   background: url('../img/blog_background.svg');
   position: relative;
-  
+
   &__header {
     font-size: 14px;
-    color: rgba(255,255,255,0.66);
+    color: rgba(255, 255, 255, 0.66);
     margin-bottom: 13px;
   }
 
