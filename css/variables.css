@@ -3,8 +3,11 @@
     --img-folder: '../img/';
 
     --lima: #51C81C;
+    --lime: #A6FF00;
     --red-orange: #FC381D;
+    --rose-bud: #FAB7AA;
 
+    --transparent-gray: rgba(255, 255, 255, 0.68);
     --black-squeeze: #EAF0F7;
     --white: #FFFFFF;
     --botticelli: #DEE5EF;
@@ -23,7 +26,9 @@
     --venice-blue: #0B5289;
     --ebony-clay: #212938;
     --ebony-clay-light: #283040;
+    --astral:#3371AB;
 
+    --cyan: #00FFFF;
     --malibu: #56C1FF;
     --heliotrope: #E260FA;
     --pomegranate: #EF3E26;
