@@ -545,7 +545,7 @@ a {
         content: '✦';
         font-family: ZapfDingbatsITC;
         font-size: 24px;
-        color: #3371AB;
+        color: var(--astral);
         position: absolute;
         right: 17px;
         top: calc(50% - 12px);
@@ -566,7 +566,7 @@ a {
       text-transform: uppercase;
       font-size: 15px;
       /* 16px */
-      color: rgba(255, 255, 255, 0.68);
+      color: var(--transparent-gray);
     }
 
     & span:last-child {
@@ -576,15 +576,15 @@ a {
 
     &&--read span:last-child,
     &&--download span:last-child {
-      color: #00FFFF;
+      color: var(--cyan);
     }
 
     &&--write span:last-child {
-      color: #A6FF00;
+      color: var(--lime);
     }
 
     &&--upload span:last-child {
-      color: #FAB7AA;
+      color: var(--rose-bud);
     }
   }
 }
@@ -649,6 +649,16 @@ a {
       font-size: 14px;
       font-weight: 200;
       color: var(--gull-gray);
+      vertical-align: middle;
+
+      & span {
+        display: flex;
+        align-items: center;
+      }
+
+      & img {
+        margin-right: 10px;
+      }
 
       &:first-child {
         color: var(--black-squeeze);
@@ -778,7 +788,7 @@ a {
 
 .widget-title {
   font-size: 20px;
-  color: #C4CFDD;
+  color: var(--blue-haze);
   letter-spacing: 0;
 }
 
@@ -808,11 +818,11 @@ a {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: #C4CFDD;
+      color: var(--blue-haze);
       padding: 0 24px;
 
       &--dark {
-        color: #67758D;
+        color: var(--slate-gray);
         text-align: center;
         white-space: nowrap;
       }
