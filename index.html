@@ -75,12 +75,21 @@
       </div>
     </section>
     <section class="projection">
+      <div class="block-header">
+        <span class="widget-title">Projection</span>
+        <div class="block-header__icon-wrapper">
+          <i class="block-header__icon-wrapper__icon more-icon"></i>
+        </div>
+      </div>
+      <img class="projection__image" src="./img/chart.png"></img>
     </section>
     <section class="medium-widgets">
       <div class="medium-widgets__block medium-widgets__balance">
-        <div class="medium-widgets__block--title">
-          <span>Balance</span>
-          <i class="medium-widgets__info info-icon"></i>
+        <div class="block-header block-header--medium">
+          <span class="widget-title">Balance</span>
+          <div class="block-header__icon-wrapper">
+            <i class="block-header__icon-wrapper__icon info-icon"></i>
+          </div>
         </div>
         <div class="medium-widgets__balance--sum">
           $183,927
@@ -100,10 +109,22 @@
         </div>
       </div>
       <div class="medium-widgets__block medium-widgets__visitors">
-
+        <div class="block-header block-header--medium">
+          <span class="widget-title">Visitors</span>
+          <div class="block-header__icon-wrapper">
+            <i class="block-header__icon-wrapper__icon refresh-icon"></i>
+            <i class="block-header__icon-wrapper__icon info-icon"></i>
+          </div>
+        </div>
+        <img class="medium-widgets__visitors__image" src="./img/graph.png"></img>
       </div>
       <div class="medium-widgets__block medium-widgets__score">
-
+        <div class="block-header block-header--medium">
+          <span class="widget-title">Score</span>
+        </div>
+        <div class="medium-widgets__score__dynamic medium-widgets__score__dynamic--grow"><i class="dynamic-icon dynamic-icon--grow"></i>+12pts</div>
+        <div class="medium-widgets__score__period">THIS WEEK</div>
+        <img class="medium-widgets__score__image" src="./img/score_chart.png"></img>
       </div>
       <div class="medium-widgets__block medium-widgets__banner">
         <span class="medium-widgets__banner__header">FROM OUR BLOG</span>
@@ -114,15 +135,22 @@
       </div>
     </section>
     <section class="large-widgets">
-      <div class="large-widgets__block large-widgets__dc">
-
+      <div class="large-widgets__block large-widgets__data-centers">
+        <div class="block-header block-header--medium">
+          <span class="widget-title">Visitors</span>
+          <div class="block-header__icon-wrapper">
+            <i class="block-header__icon-wrapper__icon refresh-icon"></i>
+            <i class="block-header__icon-wrapper__icon info-icon"></i>
+          </div>
+        </div>
+        <img src="./img/data_centers.svg" class="large-widgets__data-centers__image"></img>
       </div>
       <div class="large-widgets__block large-widgets__latest-commits">
-        <div class="large-widgets__block__header">
+        <div class="block-header">
           <span class="widget-title">Latest Commits</span>
-          <div class="large-widgets__block__header__icon-wrapper">
-            <i class="refresh-icon"></i>
-            <i class="info-icon"></i>
+          <div class="block-header__icon-wrapper">
+            <i class="block-header__icon-wrapper__icon refresh-icon"></i>
+            <i class="block-header__icon-wrapper__icon info-icon"></i>
           </div>
         </div>
         <div class="large-widgets__latest-commits__table">

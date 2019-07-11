@@ -5,6 +5,11 @@ web application bundler - Parcel.
 Used postcss modules: postcss-preset-en, precss, postcss-import, postcss-simple-vars, postcss-normalize.
 Package manager - yarn.
 
+Before starting project install all dependencies with command
+```
+yarn
+```
+
 To start development server use command
 ```
 yarn start
