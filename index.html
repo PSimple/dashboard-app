@@ -3,7 +3,6 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="./css/main.css">
-  <script src="./js/main.js"></script>
 </head>
 
 <body class="body">
@@ -14,8 +13,8 @@
         <button class="header__button header__button--menu-toggle"></button>
       </div>
       <div class="header__rightside">
-        <button class="header__button header__button--messages"></button>
-        <button class="header__button header__button--notifications"></button>
+        <button class="header__button header__button--message"></button>
+        <button class="header__button header__button--notification"></button>
         <button class="header__button header__button--grid"></button>
         <div class="header__profile">
           <i class="header__profile--arrow"></i>
@@ -36,8 +35,8 @@
   </nav>
   <main>
     <section class="page-title">
-      <header>
-        <h1 class="page-title__text"><span>overview</span>Dashboard</h1>
+      <header class="page-title__container">
+        <h1 class="page-title__text"><span class="page-title__subtitle">overview</span>Dashboard</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item"><a href="#">Lint</a></li>&nbsp;/&nbsp;
           <li class="breadcrumbs__item"><a href="#">Dashboard</a></li>&nbsp;/&nbsp;
@@ -88,11 +87,11 @@
         <div class="medium-widgets__balance--stats">
           <div class="medium-widgets__balance--column">
             Last Month
-            <span>$120,124</span>
+            <span class="medium-widgets__balance--stat">$120,124</span>
           </div>
           <div class="medium-widgets__balance--column">
             This Month
-            <span>$203,890</span>
+            <span class="medium-widgets__balance--stat">$203,890</span>
           </div>
         </div>
         <div class="medium-widgets__balance--dynamic">
@@ -171,22 +170,22 @@
         <div class="large-widgets__data">
           <div class="large-widgets__col">
             <div class="large-widgets__item large-widgets__item--read">
-              <span>Read</span>
-              <span>5.32 ms</span>
+              <span class="large-widgets__item--label">Read</span>
+              <span class="large-widgets__item--value">5.32 ms</span>
             </div>
             <div class="large-widgets__item large-widgets__item--write">
-              <span>Write</span>
-              <span>15.32 ms</span>
+              <span class="large-widgets__item--label">Write</span>
+              <span class="large-widgets__item--value">15.32 ms</span>
             </div>
           </div>
           <div class="large-widgets__col">
             <div class="large-widgets__item large-widgets__item--upload">
-              <span>Upload</span>
-              <span>5.3 gbs</span>
+              <span class="large-widgets__item--label">Upload</span>
+              <span class="large-widgets__item--value">5.3 gbs</span>
             </div>
             <div class="large-widgets__item large-widgets__item--download">
-              <span>Download</span>
-              <span>1.2 gbs</span>
+              <span class="large-widgets__item--label">Download</span>
+              <span class="large-widgets__item--value">1.2 gbs</span>
             </div>
           </div>
         </div>
@@ -207,7 +206,7 @@
             <li class="latest-projects__table--cell">Status</li>
           </ul>
           <ul class="latest-projects__table--row">
-            <li class="latest-projects__table--cell"><span><img src="./img/profile.png" />Jurriaan van der Broek</span>
+            <li class="latest-projects__table--cell"><span class="latest-projects__table--cell--name"><img src="./img/profile.png" />Jurriaan van der Broek</span>
             </li>
             <li class="latest-projects__table--cell">AR Game Using Unity</li>
             <li class="latest-projects__table--cell">02/16/2019</li>
@@ -215,7 +214,7 @@
             <li class="latest-projects__table--cell status-started">Started</li>
           </ul>
           <ul class="latest-projects__table--row">
-            <li class="latest-projects__table--cell"><span><img src="./img/profile.png" />Jurriaan van der Broek</span>
+            <li class="latest-projects__table--cell"><span class="latest-projects__table--cell--name"><img src="./img/profile.png" />Jurriaan van der Broek</span>
             </li>
             <li class="latest-projects__table--cell">AR Game Using Unity</li>
             <li class="latest-projects__table--cell">02/16/2019</li>
@@ -223,7 +222,7 @@
             <li class="latest-projects__table--cell status-completed">Completed</li>
           </ul>
           <ul class="latest-projects__table--row">
-            <li class="latest-projects__table--cell"><span><img src="./img/profile.png" />Jurriaan van der Broek</span>
+            <li class="latest-projects__table--cell"><span class="latest-projects__table--cell--name"><img src="./img/profile.png" />Jurriaan van der Broek</span>
             </li>
             <li class="latest-projects__table--cell">AR Game Using Unity</li>
             <li class="latest-projects__table--cell">02/16/2019</li>
@@ -231,7 +230,7 @@
             <li class="latest-projects__table--cell status-pending">Pending</li>
           </ul>
           <ul class="latest-projects__table--row">
-            <li class="latest-projects__table--cell"><span><img src="./img/profile.png" />Jurriaan van der Broek</span>
+            <li class="latest-projects__table--cell"><span class="latest-projects__table--cell--name"><img src="./img/profile.png" />Jurriaan van der Broek</span>
             </li>
             <li class="latest-projects__table--cell">AR Game Using Unity</li>
             <li class="latest-projects__table--cell">02/16/2019</li>
@@ -239,7 +238,7 @@
             <li class="latest-projects__table--cell status-started">Started</li>
           </ul>
           <ul class="latest-projects__table--row">
-            <li class="latest-projects__table--cell"><span><img src="./img/profile.png" />Jurriaan van der Broek</span>
+            <li class="latest-projects__table--cell"><span class="latest-projects__table--cell--name"><img src="./img/profile.png" />Jurriaan van der Broek</span>
             </li>
             <li class="latest-projects__table--cell">AR Game Using Unity</li>
             <li class="latest-projects__table--cell">02/16/2019</li>
@@ -247,7 +246,7 @@
             <li class="latest-projects__table--cell status-canceled">Canceled</li>
           </ul>
           <ul class="latest-projects__table--row">
-            <li class="latest-projects__table--cell"><span><img src="./img/profile.png" />Jurriaan van der Broek</span>
+            <li class="latest-projects__table--cell"><span class="latest-projects__table--cell--name"><img src="./img/profile.png" />Jurriaan van der Broek</span>
             </li>
             <li class="latest-projects__table--cell">AR Game Using Unity</li>
             <li class="latest-projects__table--cell">02/16/2019</li>
@@ -278,6 +277,8 @@
       </span>
     </section>
   </footer>
+  <script src="./js/main.js"></script>
+
 </body>
 
 </html>
