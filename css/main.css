@@ -111,6 +111,11 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border: 0;
+    background: transparent none;
+    color: var(--alto);
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
 
     &--title {
       padding: 0 10px 0 5px;
@@ -728,6 +733,8 @@ a {
   transition: all .3s ease-out .1s;
   display: inline-block;
   cursor: pointer;
+  border: 0;
+  background-color: transparent;
 
   &:hover {
     transition: all .3s ease-in;
@@ -741,6 +748,8 @@ a {
   width: 16px;
   height: 16px;
   transition: all .3s ease-out .1s;
+  border: 0;
+  background-color: transparent;
 
   &:hover {
     transition: all .3s ease-in;
@@ -754,6 +763,8 @@ a {
   height: 20px;
   transition: all .3s ease-out .1s;
   cursor: pointer;
+  border: 0;
+  background-color: transparent;
 
   &:hover {
     transition: all .3s ease-in;
