@@ -311,7 +311,7 @@ a {
   &__value {
     font-size: 26px;
     /* 28px */
-    color: var(__blue-haze);
+    color: var(--blue-haze);
     line-height: 26px;
     /* 28px */
     display: inline-block;
@@ -347,13 +347,13 @@ a {
     display: inline-block;
     position: relative;
     vertical-align: bottom;
-
-    &:after {
+    
+    &--progress {
       display: inline-block;
       position: absolute;
       content: '';
       background-color: var(--dodger-blue);
-      width: 72%;
+      width: 0;
       height: 8px;
       border-radius: 4px;
       transition: 0.3s all linear;
@@ -648,6 +648,7 @@ a {
     &--row {
       display: table-row;
       border-bottom: 1px solid rgba(25, 29, 40, 0.51);
+
       &:hover {
         background-color: var(--ebony-clay);
       }
@@ -748,6 +749,7 @@ a {
   width: 16px;
   height: 16px;
   transition: all .3s ease-out .1s;
+  cursor: pointer;
   border: 0;
   background-color: transparent;
 
