@@ -1,37 +1,63 @@
 const axios = require('axios');
+
 import "babel-polyfill";
 
 const url = 'http://www.json-generator.com/api/json/get/cqclnKfhsO?indent=2';
 
-async function getWidgetsData() {
-    try {
-        const response = await axios.get(url);
-        console.log(response.data);
-        dataPrint(response.data);
-    } catch (error) {
-        console.error(error);
-    }
+const controleWidgets = async () => {
+  const data = await getWidgetsData();
+  printData(data);
 }
 
-const dataValue = (value) => `${value.toString().match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g)}`;
-
-const dataMoneyWidget = (elementValue, value, currency, elementPercents, percents) => {
-    document.getElementById(elementValue).innerHTML = `${currency}${value.toString().match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g)}`;
-
-    const percentsContainer = document.getElementById(elementPercents);
-    percentsContainer.innerHTML = (percents > 0 ? '+' : '') + percents + '%';
-    percentsContainer.className += percents >= 0 ? ' small-widgets__badge--positive' : ' small-widgets__badge--negative';
+const getWidgetsData = async () => {
+  try {
+    const { data } = await axios.get(url);
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error('Data fetching error!');
+    throw error
+  }
 }
 
-const dataPrint = (data) => {
-    dataMoneyWidget('dollar__value', data.budget.value, '$', 'dollar__percents', data.budget.percents);
-    
-    document.getElementById('operations__value').innerHTML = dataValue(data.operations.value);
-
-    dataMoneyWidget('requests__value', data.requests.value, '$', 'requests__percents', data.requests.percents);
-    
-    document.getElementById('progress__value').innerHTML = data.progress.value + '%';
-    document.getElementById('progress__bar').style = 'width:' + data.progress.value + '%';
+const printData = ({ budget, operations, requests, progress }) => {
+  printBudgetData(budget);
+  printOperationsData(operations);
+  printRequestsData(requests);
+  printProgressData(progress);
 };
 
-getWidgetsData()
+const printBudgetData = data => {
+  setHtmlIntoElement('budget__value', `$${prepareBigNumbers(data.value)}`);
+  printPercents('budget__percents', data.percents);
+}
+
+const printRequestsData = data => {
+  setHtmlIntoElement('requests__value', `${prepareBigNumbers(data.value)}`);
+  printPercents('requests__percents', data.percents);
+}
+
+const printOperationsData = data => {
+  setHtmlIntoElement('operations__value', prepareBigNumbers(data.value));
+}
+
+const printProgressData = data => {
+  setHtmlIntoElement('progress__value', `${data.value}%`);
+  document.getElementById('progress__bar').style = `width:${data.value}%`;
+}
+
+const printPercents = (elementId, percents) => {
+  const html = percents < 0 ? `${percents}%` : `+${percents}%`;
+  const elementWithPercents = document.getElementById(elementId);
+  elementWithPercents.className += percents < 0 ? ' small-widgets__badge--negative'
+  : ' small-widgets__badge--positive';
+  setHtmlIntoElement(elementId, html);
+}
+
+
+const prepareBigNumbers = value => value.toString().match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
+
+const setHtmlIntoElement =
+  (elementId, html) => document.getElementById(elementId).innerHTML = html;
+
+controleWidgets()
