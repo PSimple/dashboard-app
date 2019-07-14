@@ -72,16 +72,31 @@ const prepareBigNumbers = value => value.toString().match(/(\d+?)(?=(\d{3})+(?!\
 const setHtmlIntoElement =
   (elementId, html) => document.getElementById(elementId).innerHTML = html;
 
-controleWidgets()
+controleWidgets();
 
-const showPopup = (element) => {
-  document.querySelector(element).classList.toggle('popup--visible');
+
+const togglePopup = (element, visibleClass) => {
+  document.querySelector(element).classList.toggle(visibleClass);
+
+  if (overlay.style.display === "none" || overlay.style.display === "") {
+    overlay.style.display = "block";
+    overlay.addEventListener('click', function (e) {
+      togglePopup(element, visibleClass);
+    });
+  } else {
+    overlay.style.display = "none";
+    overlay.removeEventListener('click', {});
+  }
 }
-// TODO: сделать, чтобы при клике вне кнопки попап скрывался
 
+const overlay = document.querySelector('.popup__overlay');
 const buttonGrid = document.querySelector('.header__button--grid');
-buttonGrid.addEventListener( "click" , () => {
+
+buttonGrid.addEventListener("click", (e) => {
   buttonGrid.classList.toggle('header__button--active');
-  showPopup('.popup__grid');
-  return false;
+  togglePopup('.popup__grid', 'popup--visible');
 });
+
+const widget = (element) => {
+  document.querySelector(element).classList.toggle('small-widgets__item--hidden');
+}
