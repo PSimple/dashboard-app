@@ -1,0 +1,50 @@
+[
+  {
+    "photoUrl": "./img/profile.png",
+    "name": "Jurriaan van der Broek",
+    "project": "AR Game Using Unity",
+    "startDate": "02/16/2019",
+    "endDate": "02/18/2020",
+    "status": 1
+  },
+  {
+    "photoUrl": "./img/profile.png",
+    "name": "Xian Zhou",
+    "project": "Component Library for React Native",
+    "startDate": "02/16/2019",
+    "endDate": "02/18/2020",
+    "status": 3
+  },
+  {
+    "photoUrl": "./img/profile.png",
+    "name": "Noell Blue",
+    "project": "Drag and Drop Email Editor",
+    "startDate": "02/16/2019",
+    "endDate": "02/18/2020",
+    "status": 2
+  },
+  {
+    "photoUrl": "./img/profile.png",
+    "name": "Njimoluh Ebua",
+    "project": "Sketch Plugin For Importing CSV Data Files",
+    "startDate": "02/16/2019",
+    "endDate": "02/18/2020",
+    "status": 1
+  },
+  {
+    "photoUrl": "./img/profile.png",
+    "name": "Jeremías del Pozo",
+    "project": "JavaScript Maps Library",
+    "startDate": "02/16/2019",
+    "endDate": "02/18/2020",
+    "status": 0
+  },
+  {
+    "photoUrl": "./img/profile.png",
+    "name": "Merrile Burgett",
+    "project": "A Better Reddit App For iOS With Swift",
+    "startDate": "02/16/2019",
+    "endDate": "02/18/2020",
+    "status": 1
+  }
+]

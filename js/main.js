@@ -1,10 +1,11 @@
 import 'babel-polyfill';
 import fillingWidgets from './widgets';
 import fillingCommitsTable from './latestCommits';
-// import hello from './latestProjects';
+import fillingLatestProjects from './latestProjects';
 
 fillingCommitsTable();
 fillingWidgets();
+fillingLatestProjects();
 
 const isHidden = (el) => {
   const style = window.getComputedStyle(el);
