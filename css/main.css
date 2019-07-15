@@ -561,8 +561,6 @@ a {
       text-align: center;
       display: flex;
       justify-content: space-between;
-      flex-flow: row;
-      flex-direction: column;
       align-items: baseline;
       margin-bottom: 26px;
     }
@@ -783,8 +781,6 @@ a {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    flex-flow: row;
-    flex-direction: column;
     align-items: baseline;
     margin-bottom: 33px;
   }
@@ -861,8 +857,6 @@ a {
   &__nav {
     display: flex;
     justify-content: space-between;
-    flex-flow: row;
-    flex-direction: column;
     align-items: baseline;
     margin-top: 15px;
 
