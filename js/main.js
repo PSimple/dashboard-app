@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from "axios";
 import "babel-polyfill";
 
 const widgetsUrl = 'http://www.json-generator.com/api/json/get/cqclnKfhsO?indent=2';
