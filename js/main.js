@@ -1,42 +1,47 @@
+<<<<<<< HEAD
 import axios from 'axios';
+=======
+const axios = require('axios');
+>>>>>>> 7c1062e9dff6a16c9bcc493249406820863c62e1
 import "babel-polyfill";
 
-const url = 'http://www.json-generator.com/api/json/get/cqclnKfhsO?indent=2';
+const widgetsUrl = 'http://www.json-generator.com/api/json/get/cqclnKfhsO?indent=2';
+const latestCommitsUrl = 'https://next.json-generator.com/api/json/get/EyfChEW-v';
 
 const controleWidgets = async () => {
-  loader();
-  const {
-    budget,
-    operations,
-    requests,
-    progress
-  } = await getWidgetsData();
-
-  printBudgetData(budget);
-  printOperationsData(operations);
-  printRequestsData(requests);
-  printProgressData(progress);
-  loader();
-}
-
-const loader = () => {
-  const widget = document.querySelectorAll('.small-widgets__item');
-  widget.forEach((item) => {
-    item.classList.toggle('small-widgets__item--loading');
-  })
-}
-
-const getWidgetsData = async () => {
-  try {
+    printWidgetLoader();
     const {
-      data
-    } = await axios.get(url);
-    console.log(data);
-    return data;
-  } catch (error) {
-    console.error('Data fetching error!');
-    throw error
-  }
+        budget,
+        operations,
+        requests,
+        progress
+    } = await fetchData(widgetsUrl);
+
+    printBudgetData(budget);
+    printOperationsData(operations);
+    printRequestsData(requests);
+    printProgressData(progress);
+    printWidgetLoader();
+}
+
+const printWidgetLoader = () => {
+    const widgets = document.querySelectorAll('.small-widgets__item');
+    widgets.forEach((item) => {
+        item.classList.toggle('small-widgets__item--loading');
+    })
+}
+
+const fetchData = async url => {
+    try {
+        const {
+            data
+        } = await axios.get(url);
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error('Data fetching error!');
+        throw error
+    }
 }
 
 const printBudgetData = data => {
@@ -71,6 +76,35 @@ const prepareBigNumbers = value => value.toString().match(/(\d+?)(?=(\d{3})+(?!\
 const setHtmlIntoElement =
   (elementId, html) => document.getElementById(elementId).innerHTML = html;
 
+
+const controlLatestCommits = async () => {
+  printCommitsListLoader();
+  const data = await fetchData(latestCommitsUrl);
+  printCommitsList(data);
+}
+
+const printCommitsList = data => {
+  const html = data.reduce((acc, { message, time, link }) => `
+    ${acc}
+    <ul class="commits-table__row">
+      <li class="commits-table__cell commits-table__cell--message">${message}</li>
+      <li class="commits-table__cell commits-table__cell--time">${time}</li>
+      <li class="commits-table__cell commits-table__cell--icon-arrow-right">
+        <a class="cell-link" href=${link}><i class="right-arrow"></i></a>
+      </li>
+    </ul>
+  `, '');
+  setHtmlIntoElement('latest-commits-table', html);
+}
+
+const printCommitsListLoader = () => {
+  const rows = document.querySelectorAll('.commits-table__row');
+  rows.forEach((item) => {
+    item.classList.toggle('commits-table__row--loading');
+  })
+}
+
+controlLatestCommits();
 controleWidgets();
 
 const isHidden = (el) => {
@@ -130,3 +164,4 @@ document.querySelectorAll('.small-widgets__checkbox').forEach((e) => {
     widget(widgetCheckStates);
   });
 })
+

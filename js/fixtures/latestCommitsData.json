@@ -1,0 +1,37 @@
+[
+  {
+    "message": "Added support for social auth",
+    "time": "2 min ago",
+    "link": "#"
+  },
+  {
+    "message": "Merge updates with latest push by adrolem ipsum",
+    "time": "5 min ago",
+    "link": "#"
+  },
+  {
+    "message": "Fixed auto-build bug",
+    "time": "9 min ago",
+    "link": "#"
+  },
+  {
+    "message": "Deployed the latest dashboard",
+    "time": "35 min ago",
+    "link": "#"
+  },
+  {
+    "message": "Changed .env variables",
+    "time": "43 min ago",
+    "link": "#"
+  },
+  {
+    "message": "Fixed merge conflicts in the docs",
+    "time": "57 min ago",
+    "link": "#"
+  },
+  {
+    "message": "Initialized a new repo for the chatbot",
+    "time": "1 hour ago",
+    "link": "#"
+  }
+]
