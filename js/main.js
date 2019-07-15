@@ -1,5 +1,4 @@
-const axios = require('axios');
-
+import axios from 'axios';
 import "babel-polyfill";
 
 const url = 'http://www.json-generator.com/api/json/get/cqclnKfhsO?indent=2';
@@ -86,7 +85,7 @@ const togglePopup = (element, visibleClass) => {
     overlay.addEventListener('click', function (e) {
       togglePopup(element, visibleClass);
     });
-    document.querySelector(element).classList.add(visibleClass);
+    document.querySelector(element).classList.add(visibleClass); 
   } else {
     overlay.style.display = "none";
     document.querySelector(element).classList.remove(visibleClass);

@@ -7,7 +7,7 @@ a {
 }
 
 .body {
-  font-family: Helvetica;
+  font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
   position: relative;
   color: var(--blue-haze);
   margin: 0;
@@ -35,6 +35,12 @@ a {
     }
   }
 
+  &__link {
+    margin-right: 30px;
+    position: relative;
+    pointer-events: all;
+  }
+
   &--checked,
   &__link:hover {
     color: var(--pattens-blue);
@@ -49,12 +55,6 @@ a {
       border-radius: 1.5px;
       background-color: var(--hawkes-blue);
     }
-  }
-
-  &__link {
-    margin-right: 30px;
-    position: relative;
-    pointer-events: all;
   }
 }
 
@@ -107,7 +107,6 @@ a {
       margin-left: 60px;
     }
 
-    &--active {}
   }
 
   &__profile {
@@ -156,7 +155,7 @@ a {
       }
     }
 
-    &:hover &--arrow {
+    &.header__button--active &--arrow {
       &:after {
         left: 0;
         transform: rotate(-45deg);
