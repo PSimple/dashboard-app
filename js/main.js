@@ -1,11 +1,11 @@
 import 'babel-polyfill';
 import fillingWidgets from './widgets';
 import fillingCommitsTable from './latestCommits';
-import * as popup from './popup';
+
+export * from './popup';
 
 fillingCommitsTable();
 fillingWidgets();
-popup();
 
 const widget = (states) => {
   document.querySelectorAll('.small-widgets__item').forEach((e) => {
