@@ -1,77 +1,8 @@
-import axios from 'axios';
 import 'babel-polyfill';
+import { setHtmlIntoElement, fetchData } from './serviceFunctions';
+import fillingWidgets from './widgets';
 
-const widgetsUrl = 'http://www.json-generator.com/api/json/get/cqclnKfhsO?indent=2';
 const latestCommitsUrl = 'https://next.json-generator.com/api/json/get/EyfChEW-v';
-
-const prepareBigNumbers = value => value.toString().match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
-
-const setHtmlIntoElement = (elementId, html) => {
-  document.getElementById(elementId).innerHTML = html;
-};
-
-
-const printWidgetLoader = () => {
-  const widgets = document.querySelectorAll('.small-widgets__item');
-  widgets.forEach((item) => {
-    item.classList.toggle('small-widgets__item--loading');
-  });
-};
-
-const printPercents = (elementId, percents) => {
-  const html = percents < 0 ? `${percents}%` : `+${percents}%`;
-  const elementWithPercents = document.getElementById(elementId);
-  elementWithPercents.className += percents < 0 ? ' small-widgets__badge--negative'
-    : ' small-widgets__badge--positive';
-  setHtmlIntoElement(elementId, html);
-};
-
-const printBudgetData = (data) => {
-  setHtmlIntoElement('budget__value', `$${prepareBigNumbers(data.value)}`);
-  printPercents('budget__percents', data.percents);
-};
-
-const printRequestsData = (data) => {
-  setHtmlIntoElement('requests__value', `${prepareBigNumbers(data.value)}`);
-  printPercents('requests__percents', data.percents);
-};
-
-const printOperationsData = (data) => {
-  setHtmlIntoElement('operations__value', prepareBigNumbers(data.value));
-};
-
-const printProgressData = (data) => {
-  setHtmlIntoElement('progress__value', `${data.value}%`);
-  document.getElementById('progress__bar').style = `width:${data.value}%`;
-};
-
-const fetchData = async (url) => {
-  try {
-    const {
-      data,
-    } = await axios.get(url);
-    return data;
-  } catch (error) {
-    throw error;
-  }
-};
-
-const controleWidgets = async () => {
-  printWidgetLoader();
-  const {
-    budget,
-    operations,
-    requests,
-    progress,
-  } = await fetchData(widgetsUrl);
-
-  printBudgetData(budget);
-  printOperationsData(operations);
-  printRequestsData(requests);
-  printProgressData(progress);
-  printWidgetLoader();
-};
-
 
 const printCommitsList = (data) => {
   const html = data.reduce((acc, {
@@ -105,7 +36,7 @@ const controlLatestCommits = async () => {
 };
 
 controlLatestCommits();
-controleWidgets();
+fillingWidgets();
 
 const isHidden = (el) => {
   const style = window.getComputedStyle(el);
@@ -150,7 +81,9 @@ const widget = (states) => {
   });
 };
 
-const widgetCheckStates = [{ budget: 1 }, { operations: 1 }, { requests: 1 }, { progress: 1 }];
+const widgetCheckStates = {
+  budget: true, operations: true, requests: true, progress: true,
+};
 
 document.querySelectorAll('.small-widgets__checkbox').forEach((e) => {
   e.addEventListener('click', (el) => {
