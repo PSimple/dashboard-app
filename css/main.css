@@ -35,25 +35,26 @@ a {
     }
   }
 
-  &--checked,
-  &__link:hover {
-    color: var(--pattens-blue);
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 3px;
-      top: 36px;
-      left: calc(50% - 10px);
-      border-radius: 1.5px;
-      background-color: var(--hawkes-blue);
-    }
-  }
-
   &__link {
     margin-right: 30px;
     position: relative;
+    transition: all .2s ease-out;
+
+    &--checked,
+    &:hover {
+      color: var(--pattens-blue);
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        top: 36px;
+        left: calc(50% - 10px);
+        border-radius: 1.5px;
+        background-color: var(--hawkes-blue);
+      }
+    }
   }
 }
 
@@ -192,9 +193,14 @@ a {
 
   &__link {
     margin-right: 30px;
+    transition: all .2s ease-out;
+
+    &:hover {
+      color: var(--pattens-blue);
+    }
   }
 
-  &__links_container {
+  &__links-container {
     display: inline-block;
   }
 
@@ -824,68 +830,9 @@ a {
   letter-spacing: 0;
 }
 
-.large-widgets__latest-commits {
+.latest-commits {
   padding: 0;
   position: relative;
-
-  &__table {
-    display: table;
-    width: 100%;
-    font-size: 14px;
-    margin-bottom: 13px;
-    position: relative;
-
-    &__row {
-      display: table-row;
-      list-style-type: none;
-      height: 38px;
-      line-height: 38px;
-
-      &:nth-child(odd) {
-        background-color: rgba(246, 249, 252, 0.03);
-      }
-
-      &::after {
-        background-image: url('../img/loader.gif');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 100px;
-        width: 38px;
-        height: 38px;
-        display: none;
-        position: relative;
-        content: '';
-        left: -155%;
-        transition: all .5s ease-out;
-        opacity: 0;
-      }
-      &--loading::after {
-        display: block;
-        transition: all .5s ease-in;
-        opacity: 1;
-      }
-    }
-
-    &__cell {
-      display: table-cell;
-      max-width: 205px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      color: var(--blue-haze);
-      padding: 0 24px;
-
-      &--dark {
-        color: var(--slate-gray);
-        text-align: center;
-        white-space: nowrap;
-      }
-    }
-
-    & .icon--arrow--right {
-      text-align: right;
-    }
-  }
 
   &__footer-link {
     font-size: 12px;
@@ -894,11 +841,92 @@ a {
     bottom: 24px;
     left: 24px;
     cursor: pointer;
+    transition: 1s;
 
     &:hover {
       opacity: .7;
     }
   }
+}
+
+.commits-table {
+  display: table;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 13px;
+  position: relative;
+
+  &__row {
+    display: table-row;
+    list-style-type: none;
+    height: 38px;
+    line-height: 38px;
+
+    &:nth-child(odd) {
+      background-color: rgba(246, 249, 252, 0.03);
+    }
+
+    &::after {
+      background-image: url('../img/loader.gif');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100px;
+      width: 38px;
+      height: 38px;
+      display: none;
+      position: relative;
+      content: '';
+      left: -155%;
+      transition: all .5s ease-out;
+      opacity: 0;
+    }
+    &--loading::after {
+      display: block;
+      transition: all .5s ease-in;
+      opacity: 1;
+    }
+  }
+
+  &__cell {
+    display: table-cell;
+    max-width: 205px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--blue-haze);
+    padding: 0 24px;
+
+    &--message {
+      cursor: pointer;
+      transition: all .2s ease-out;
+
+      &:hover {
+        color: var(--pattens-blue);
+      }
+    }
+
+    &--time {
+      color: var(--slate-gray);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    &--icon-arrow-right {
+      text-align: right;
+      transition: all .2s ease-out;
+
+      &:hover {
+        padding: 0 20px 0 24px;
+      }
+    }
+  }
+}
+
+.cell-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .right-arrow {

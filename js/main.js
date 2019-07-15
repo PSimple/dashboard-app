@@ -81,20 +81,24 @@ const controlLatestCommits = async () => {
 }
 
 const printCommitsList = data => {
-  const html = data.map(({ message, time, link }) => `
-    <ul class="large-widgets__latest-commits__table__row">
-      <li class="large-widgets__latest-commits__table__cell">${message}</li>
-      <li class="large-widgets__latest-commits__table__cell--dark">${time}</li>
-      <li class="large-widgets__latest-commits__table__cell icon--arrow--right"><a href=${link}><i class="right-arrow"></i></a></li>
+  const html = data.reduce((acc, { message, time, link }) => `
+    ${acc}
+    <ul class="commits-table__row">
+      <li class="commits-table__cell commits-table__cell--message">${message}</li>
+      <li class="commits-table__cell commits-table__cell--time">${time}</li>
+      <li class="commits-table__cell commits-table__cell--icon-arrow-right">
+        <a class="cell-link" href=${link}><i class="right-arrow"></i></a>
+      </li>
     </ul>
-  `).join('');
+  `, '');
   setHtmlIntoElement('latest-commits-table', html);
 }
 
 const printCommitsListLoader = () => {
-  const rows = document.querySelectorAll('.large-widgets__latest-commits__table__row');
+  const rows = document.querySelectorAll('.commits-table__row');
   rows.forEach((item) => {
-    item.classList.toggle('large-widgets__latest-commits__table__row--loading');
+    item.classList.toggle('commits-table__row--loading');
   })
 }
+
 controlLatestCommits();
