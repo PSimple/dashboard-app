@@ -30,6 +30,7 @@
     "postcss-preset-env": "^6.6.0",
     "postcss-simple-vars": "^5.0.2",
     "precss": "^4.0.0",
+    "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0"
   },
   "devDependencies": {
@@ -38,6 +39,7 @@
     "babel-preset-env": "^1.7.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "17.1.1",
+    "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
