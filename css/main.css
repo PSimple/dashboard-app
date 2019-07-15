@@ -606,6 +606,43 @@ a {
 
   &__banner {
     grid-column: 3;
+    background: url('../img/blog_background.svg');
+    position: relative;
+  
+    &__header {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.66);
+      margin-bottom: 13px;
+    }
+  
+    &__title {
+      font-size: 20px;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+  
+    &__text {
+      font-size: 16px;
+      color: #97D4F0;
+      margin-bottom: 15px;
+      max-width: 128px;
+    }
+  
+    &__link {
+      font-size: 12px;
+      color: #51FBEC;
+      cursor: pointer;
+  
+      &:hover {
+        opacity: .7;
+      }
+    }
+  
+    &__image {
+      position: absolute;
+      bottom: 26px;
+      right: 26px;
+    }
   }
 }
 
@@ -1051,46 +1088,6 @@ a {
   background: url('../img/right_arrow.svg');
   width: 9px;
   height: 13px;
-}
-
-.medium-widgets__banner {
-  background: url('../img/blog_background.svg');
-  position: relative;
-
-  &__header {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.66);
-    margin-bottom: 13px;
-  }
-
-  &__title {
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-  }
-
-  &__text {
-    font-size: 16px;
-    color: #97D4F0;
-    margin-bottom: 15px;
-    max-width: 128px;
-  }
-
-  &__link {
-    font-size: 12px;
-    color: #51FBEC;
-    cursor: pointer;
-
-    &:hover {
-      opacity: .7;
-    }
-  }
-
-  &__image {
-    position: absolute;
-    bottom: 26px;
-    right: 26px;
-  }
 }
 
 .block-header {

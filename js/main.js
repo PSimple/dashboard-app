@@ -6,7 +6,9 @@ const latestCommitsUrl = 'https://next.json-generator.com/api/json/get/EyfChEW-v
 
 const prepareBigNumbers = value => value.toString().match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
 
-const setHtmlIntoElement = (elementId, html) => document.getElementById(elementId).innerHTML = html;
+const setHtmlIntoElement = (elementId, html) => {
+  document.getElementById(elementId).innerHTML = html;
+};
 
 
 const printWidgetLoader = () => {
@@ -19,8 +21,8 @@ const printWidgetLoader = () => {
 const printPercents = (elementId, percents) => {
   const html = percents < 0 ? `${percents}%` : `+${percents}%`;
   const elementWithPercents = document.getElementById(elementId);
-  elementWithPercents.className += percents < 0 ? ' small-widgets__badge--negative' :
-    ' small-widgets__badge--positive';
+  elementWithPercents.className += percents < 0 ? ' small-widgets__badge--negative'
+    : ' small-widgets__badge--positive';
   setHtmlIntoElement(elementId, html);
 };
 
