@@ -6,6 +6,7 @@
 </head>
 
 <body class="body">
+  <div class="popup__overlay"></div>
   <header class="header">
     <div class="header__wrapper">
       <div class="header__leftside">
@@ -21,6 +22,41 @@
           <span class="header__profile--title">Luke Brown</span>
           <img src="./img/profile.png" alt="">
         </button>
+        <div class="popup popup__grid">
+          <div class="popup__container">
+            <a href="#" class="popup__item">
+              <img src="./img/github.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Github</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="./img/bitbucket.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Bitbucket</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="./img/slack.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Slack</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="./img/mailchimp.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Mailchimp</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="./img/asana.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Asana</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="./img/intercom.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Intercom</span>
+            </a>
+          </div>
+        </div>
+        <div class="popup popup__profile">
+          <ul class="popup__list">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Personal Info</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -44,28 +80,49 @@
         </ul>
       </header>
     </section>
+    <section class="small-widgets__controller">
+      <ul>
+        <li>
+          <input class="small-widgets__checkbox" type="checkbox" name="budget" checked="checked" id="budgetControl">
+          <label for="budgetControl">Toggle budget</label>
+        </li>
+        <li>
+          <input class="small-widgets__checkbox" type="checkbox" name="operations" checked="checked"
+            id="operationsControl">
+          <label for="operationsControl">Toggle operations</label>
+        </li>
+        <li>
+          <input class="small-widgets__checkbox" type="checkbox" name="requests" checked="checked" id="requestsControl">
+          <label for="requestsControl">Toggle requests</label>
+        </li>
+        <li>
+          <input class="small-widgets__checkbox" type="checkbox" name="progress" checked="checked" id="progressControl">
+          <label for="progressControl">Toggle progress</label>
+        </li>
+      </ul>
+    </section>
     <section class="small-widgets">
-      <div class="small-widgets__item small-widgets__item--dollar">
+      <div data-name="budget" class="small-widgets__item small-widgets__item--dollar">
         <span class="small-widgets__title">Budget</span>
         <div>
           <span class="small-widgets__value" id="budget__value"></span>
           <span class="small-widgets__badge" id="budget__percents"></span>
         </div>
       </div>
-      <div class="small-widgets__item small-widgets__item--repair">
+      <div data-name="operations" class="small-widgets__item small-widgets__item--repair">
         <span class="small-widgets__title">OPERATIONS</span>
         <div>
           <span class="small-widgets__value" id="operations__value"></span>
         </div>
       </div>
-      <div class="small-widgets__item small-widgets__item--arrows">
+      <div data-name="requests" class="small-widgets__item small-widgets__item--arrows">
         <span class="small-widgets__title">REQUESTS</span>
         <div>
           <span class="small-widgets__value" id="requests__value"></span>
           <span class="small-widgets__badge" id="requests__percents"></span>
         </div>
       </div>
-      <div class="small-widgets__item small-widgets__item--clock">
+      <div data-name="progress" class="small-widgets__item small-widgets__item--clock">
         <span class="small-widgets__title">PROGRESS</span>
         <div>
           <span class="small-widgets__value" id="progress__value"></span>
@@ -123,7 +180,8 @@
         <div class="block-header block-header--medium">
           <span class="widget-title">Score</span>
         </div>
-        <div class="medium-widgets__score__dynamic medium-widgets__score__dynamic--grow"><i class="dynamic-icon dynamic-icon--grow"></i>+12pts</div>
+        <div class="medium-widgets__score__dynamic medium-widgets__score__dynamic--grow"><i
+            class="dynamic-icon dynamic-icon--grow"></i>+12pts</div>
         <div class="medium-widgets__score__period">THIS WEEK</div>
         <img class="medium-widgets__score__image" src="./img/score_chart.png"></img>
       </div>

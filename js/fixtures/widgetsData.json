@@ -1,18 +1,18 @@
 [
-    {
-      "budget": {
-        "percents": 15,
-        "value": 129850
-      },
-      "operations": {
-        "value": 15000
-      },
-      "requests": {
-        "percents": -21,
-        "value": 37209
-      },
-      "progress": {
-        "value": 72
-      }
+  {
+    "budget": {
+      "percents": 15,
+      "value": 129850
+    },
+    "operations": {
+      "value": 15000
+    },
+    "requests": {
+      "percents": -21,
+      "value": 37209
+    },
+    "progress": {
+      "value": 72
     }
-  ]
+  }
+]
