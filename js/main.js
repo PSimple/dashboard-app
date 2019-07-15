@@ -97,6 +97,26 @@ buttonGrid.addEventListener("click", (e) => {
   togglePopup('.popup__grid', 'popup--visible');
 });
 
-const widget = (element) => {
-  document.querySelector(element).classList.toggle('small-widgets__item--hidden');
+const widget = (states) => {
+  document.querySelectorAll('.small-widgets__item').forEach((e) => {
+    let eWidgetState = !e.classList.contains('small-widgets__item--hidden');
+    if (states[e.getAttribute('data-name').toLowerCase()] != eWidgetState) {
+      e.classList.toggle('small-widgets__item--hidden');
+    }
+  })
 }
+
+const widgetCheckStates = {
+  'budget': 1,
+  'operations': 1,
+  'requests': 1,
+  'progress': 1
+}
+
+document.querySelectorAll('.small-widgets__checkbox').forEach((e) => {
+  e.addEventListener('click', (el) => {
+    const elName = el.target.name;
+    widgetCheckStates[elName] = !widgetCheckStates[elName];
+    widget(widgetCheckStates);
+  });
+})

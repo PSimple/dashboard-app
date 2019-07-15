@@ -76,44 +76,45 @@
     <section class="small-widgets__controller">
       <ul>
         <li>
-          <input type="checkbox" name="budget" id="budgetControl">
+          <input class="small-widgets__checkbox" type="checkbox" name="budget" checked="checked" id="budgetControl">
           <label for="budgetControl">Toggle budget</label>
         </li>
         <li>
-          <input type="checkbox" name="operations" id="operationsControl">
+          <input class="small-widgets__checkbox" type="checkbox" name="operations" checked="checked" id="operationsControl">
           <label for="operationsControl">Toggle operations</label>
         </li>
         <li>
-          <input type="checkbox" name="requests" id="requestsControl">
+          <input class="small-widgets__checkbox" type="checkbox" name="requests" checked="checked" id="requestsControl">
           <label for="requestsControl">Toggle requests</label>
         </li>
-        <li><input type="checkbox" name="progress" id="progressControl">
+        <li>
+          <input class="small-widgets__checkbox" type="checkbox" name="progress" checked="checked" id="progressControl">
           <label for="progressControl">Toggle progress</label>
         </li>
       </ul>
     </section>
     <section class="small-widgets">
-      <div class="small-widgets__item small-widgets__item--dollar">
+      <div data-name="budget" class="small-widgets__item small-widgets__item--dollar">
         <span class="small-widgets__title">Budget</span>
         <div>
           <span class="small-widgets__value" id="budget__value"></span>
           <span class="small-widgets__badge" id="budget__percents"></span>
         </div>
       </div>
-      <div class="small-widgets__item small-widgets__item--repair">
+      <div data-name="operations" class="small-widgets__item small-widgets__item--repair">
         <span class="small-widgets__title">OPERATIONS</span>
         <div>
           <span class="small-widgets__value" id="operations__value"></span>
         </div>
       </div>
-      <div class="small-widgets__item small-widgets__item--arrows">
+      <div data-name="requests" class="small-widgets__item small-widgets__item--arrows">
         <span class="small-widgets__title">REQUESTS</span>
         <div>
           <span class="small-widgets__value" id="requests__value"></span>
           <span class="small-widgets__badge" id="requests__percents"></span>
         </div>
       </div>
-      <div class="small-widgets__item small-widgets__item--clock">
+      <div data-name="progress" class="small-widgets__item small-widgets__item--clock">
         <span class="small-widgets__title">PROGRESS</span>
         <div>
           <span class="small-widgets__value" id="progress__value"></span>
