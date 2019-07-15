@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import fillingWidgets from './widgets';
 import fillingCommitsTable from './latestCommits';
+// import hello from './latestProjects';
 
 fillingCommitsTable();
 fillingWidgets();
