@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const setHtmlIntoElement = (elementId, html) => {
-  document.getElementById(elementId).innerHTML = html;
+const setHtmlIntoElement = (element, html) => {
+  element.innerHTML = html;
 };
 
 

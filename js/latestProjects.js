@@ -9,9 +9,8 @@ const statuses = {
   3: 'Completed',
 };
 
-const printProjectsList = (data) => {
+const printProjectsList = (data, imageUrl) => {
   const html = data.reduce((acc, {
-    photoUrl,
     name,
     project,
     startDate,
@@ -21,8 +20,8 @@ const printProjectsList = (data) => {
     ${acc}
     <ul class="projects-table__row projects-table__row--loading"">
       <li class="projects-table__cell">
-        <span class="name">
-          <img src="${photoUrl}" class="profile-icon"/>
+        <span class="project-author-name">
+          <img src="${imageUrl}" class="profile-icon"/>
           ${name}
         </span>
       </li>
@@ -41,7 +40,7 @@ const printProjectsList = (data) => {
     <li class="projects-table__cell">Status</li>
   </ul>
   `);
-  setHtmlIntoElement('projects-table', html);
+  setHtmlIntoElement(document.getElementById('projects-table'), html);
 };
 
 const printProjectsListLoader = () => {
@@ -82,13 +81,14 @@ const printProjectsListLoader = () => {
       <li class="projects-table__cell">Status</li>
     </ul>
     `);
-  setHtmlIntoElement('projects-table', html);
+  setHtmlIntoElement(document.getElementById('projects-table'), html);
 };
 
 const controlLatestProjects = async () => {
+  const imageUrl = document.querySelector('.dirty-hack').src;
   printProjectsListLoader();
   const data = await fetchData(latestProjectsUrl);
-  printProjectsList(data);
+  printProjectsList(data, imageUrl);
 };
 
 export default controlLatestProjects;

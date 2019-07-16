@@ -17,7 +17,7 @@ const printCommitsList = (data) => {
       </li>
     </ul>
   `, '');
-  setHtmlIntoElement('latest-commits-table', html);
+  setHtmlIntoElement(document.getElementById('latest-commits-table'), html);
 };
 
 const printCommitsListLoader = () => {

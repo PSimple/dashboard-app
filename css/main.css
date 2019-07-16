@@ -44,6 +44,7 @@ a {
     &--checked,
     &:hover {
       color: var(--pattens-blue);
+      transition: all .3s ease-in;
 
       &::after {
         content: '';
@@ -216,6 +217,7 @@ a {
 
     a:hover {
       color: var(--blue-haze);
+      transition: all .3s ease-in;
     }
   }
 
@@ -248,7 +250,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    transition: all .3s ease-in;
+    transition: all .3s ease-out;
 
     &--icon {
       height: 40px;
@@ -261,7 +263,7 @@ a {
     &:hover {
       background: rgba(25, 29, 40, 0.35);
       border-radius: 4px;
-      transition: all .3s ease-out;
+      transition: all .3s ease-in;
     }
   }
 }
@@ -296,6 +298,7 @@ a {
 
     &:hover {
       color: var(--pattens-blue);
+      transition: all .3s ease-in;
     }
   }
 
@@ -306,9 +309,11 @@ a {
   &__author-link {
     color: #3491F8;
     cursor: pointer;
+    transition: all .3s ease-out;
 
     &:hover {
       opacity: .7;
+      transition: all .3s ease-in;
     }
   }
 }
@@ -353,8 +358,10 @@ a {
     font-weight: 100;
 
     &__item {
+      transition: all .3s ease-out;
       a:hover {
         color: var(--alto);
+        transition: all .3s ease-in;
       }
     }
   }
@@ -506,6 +513,7 @@ a {
   box-shadow: 0 5px 10px -10px rgba(0, 0, 0, 0.50);
   background-color: var(--ebony-clay-light);
   height: 449px;
+  transition: all .3s ease-out;
 
   &:hover {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.60);
@@ -561,8 +569,6 @@ a {
       text-align: center;
       display: flex;
       justify-content: space-between;
-      flex-flow: row;
-      flex-direction: column;
       align-items: baseline;
       margin-bottom: 26px;
     }
@@ -632,9 +638,11 @@ a {
       font-size: 12px;
       color: #51FBEC;
       cursor: pointer;
+      transition: all .3s ease-out;
   
       &:hover {
         opacity: .7;
+        transition: all .3s ease-in;
       }
     }
   
@@ -808,9 +816,11 @@ a {
       background: none;
       border: 0;
       cursor: pointer;
+      transition: all .3s ease-out;
 
       &:hover {
         opacity: .7;
+        transition: all .3s ease-in;
       }
 
       &.button-disabled,
@@ -818,6 +828,7 @@ a {
         cursor: default;
         color: var(--blue-haze);
         opacity: 1;
+        transition: all .3s ease-in;
       }
     }
   }
@@ -842,15 +853,6 @@ a {
     font-weight: 200;
     color: var(--gull-gray);
     vertical-align: middle;
-
-    & .name {
-      display: flex;
-      align-items: center;
-    }
-
-    & .profile-icon {
-      margin-right: 10px;
-    }
 
     &:first-child {
       color: var(--black-squeeze);
@@ -887,13 +889,30 @@ a {
   }
 }
 
+.profile-icon {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.project-author-name {
+  display: flex;
+  align-items: center;
+}
+
 @keyframes placeHolderShimmer{
   0%{
-      background-position: -468px 0
+    background-position: -468px 0
   }
   100%{
-      background-position: 468px 0
+    background-position: 468px 0
   }
+}
+
+.dirty-hack {
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 .preloader {
@@ -911,14 +930,15 @@ a {
   height: 16px;
   
   &--profile {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     margin-right: 10px;
   }
 
   &--name {
-    width: 93px;
+    width: 139px;
+    margin-bottom: 3px;
   }
 
   &--project {
@@ -1032,10 +1052,11 @@ a {
     bottom: 24px;
     left: 24px;
     cursor: pointer;
-    transition: 1s;
+    transition: all .3s ease-out;
 
     &:hover {
       opacity: .7;
+      transition: all .3s ease-in;
     }
   }
 }
@@ -1094,6 +1115,7 @@ a {
 
       &:hover {
         color: var(--pattens-blue);
+        transition: all .3s ease-in;
       }
     }
 
@@ -1109,6 +1131,7 @@ a {
 
       &:hover {
         padding: 0 20px 0 24px;
+        transition: all .3s ease-in;
       }
     }
   }
