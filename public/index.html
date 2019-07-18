@@ -2,15 +2,16 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" type="text/css" href="../src/css/main.css">
 </head>
 
 <body class="body">
+  <div id="root"></div>
   <div class="popup__overlay"></div>
   <header class="header">
     <div class="header__wrapper">
       <div class="header__leftside">
-        <a href="#" class="logo"><img src="./img/logo.svg" alt=""></a>
+        <a href="#" class="logo"><img src="../src/img/logo.svg" alt=""></a>
         <button class="header__button header__button--menu-toggle"></button>
       </div>
       <div class="header__rightside">
@@ -20,32 +21,32 @@
         <button class="header__profile">
           <i class="header__profile--arrow"></i>
           <span class="header__profile--title">Luke Brown</span>
-          <img src="./img/profile.png" alt="">
+          <img src="../src/img/profile.png" alt="">
         </button>
         <div class="popup popup__grid">
           <div class="popup__container">
             <a href="#" class="popup__item">
-              <img src="./img/github.png" alt="" class="popup__item--icon">
+              <img src="../src/img/github.png" alt="" class="popup__item--icon">
               <span class="popup__item--title">Github</span>
             </a>
             <a href="#" class="popup__item">
-              <img src="./img/bitbucket.png" alt="" class="popup__item--icon">
+              <img src="../src/img/bitbucket.png" alt="" class="popup__item--icon">
               <span class="popup__item--title">Bitbucket</span>
             </a>
             <a href="#" class="popup__item">
-              <img src="./img/slack.png" alt="" class="popup__item--icon">
+              <img src="../src/img/slack.png" alt="" class="popup__item--icon">
               <span class="popup__item--title">Slack</span>
             </a>
             <a href="#" class="popup__item">
-              <img src="./img/mailchimp.png" alt="" class="popup__item--icon">
+              <img src="../src/img/mailchimp.png" alt="" class="popup__item--icon">
               <span class="popup__item--title">Mailchimp</span>
             </a>
             <a href="#" class="popup__item">
-              <img src="./img/asana.png" alt="" class="popup__item--icon">
+              <img src="../src/img/asana.png" alt="" class="popup__item--icon">
               <span class="popup__item--title">Asana</span>
             </a>
             <a href="#" class="popup__item">
-              <img src="./img/intercom.png" alt="" class="popup__item--icon">
+              <img src="../src/img/intercom.png" alt="" class="popup__item--icon">
               <span class="popup__item--title">Intercom</span>
             </a>
           </div>
@@ -139,7 +140,7 @@
           <i class="block-header__icon-wrapper__icon more-icon"></i>
         </div>
       </div>
-      <img class="projection__image" src="./img/chart.png"></img>
+      <img class="projection__image" src="../src/img/chart.png"></img>
     </section>
     <section class="medium-widgets">
       <div class="medium-widgets__block medium-widgets__balance">
@@ -174,7 +175,7 @@
             <i class="block-header__icon-wrapper__icon info-icon"></i>
           </div>
         </div>
-        <img class="medium-widgets__visitors__image" src="./img/graph.png"></img>
+        <img class="medium-widgets__visitors__image" src="../src/img/graph.png"></img>
       </div>
       <div class="medium-widgets__block medium-widgets__score">
         <div class="block-header block-header--medium">
@@ -183,14 +184,14 @@
         <div class="medium-widgets__score__dynamic medium-widgets__score__dynamic--grow"><i
             class="dynamic-icon dynamic-icon--grow"></i>+12pts</div>
         <div class="medium-widgets__score__period">THIS WEEK</div>
-        <img class="medium-widgets__score__image" src="./img/score_chart.png"></img>
+        <img class="medium-widgets__score__image" src="../src/img/score_chart.png"></img>
       </div>
       <div class="medium-widgets__block medium-widgets__banner">
         <span class="medium-widgets__banner__header">FROM OUR BLOG</span>
         <span class="medium-widgets__banner__title">Urgent ! We Updated Our ToS</span>
         <span class="medium-widgets__banner__text">Hello, we just updated our tos ..</span>
         <span class="medium-widgets__banner__link">READ MORE</span>
-        <img src="./img/blog_image.svg" class="medium-widgets__banner__image"></img>
+        <img src="../src/img/blog_image.svg" class="medium-widgets__banner__image"></img>
       </div>
     </section>
     <section class="large-widgets">
@@ -202,7 +203,7 @@
             <i class="block-header__icon-wrapper__icon info-icon"></i>
           </div>
         </div>
-        <img src="./img/data_centers.svg" class="large-widgets__data-centers__image"></img>
+        <img src="../src/img/data_centers.svg" class="large-widgets__data-centers__image"></img>
       </div>
       <div class="large-widgets__block latest-commits">
         <div class="block-header">
@@ -295,7 +296,7 @@
           </ul>
           <ul class="projects-table__row">
             <li class="projects-table__cell">
-          <img src="./img/profile.png" class="dirty-hack"/>
+          <img src="../src/img/profile.png" class="dirty-hack"/>
             </li>
             <li class="projects-table__cell"></li>
             <li class="projects-table__cell"></li>
@@ -361,8 +362,8 @@
       </span>
     </section>
   </footer>
-  <script src="./js/main.js"></script>
-
+  <script src="../src/js/main.js"></script>
+  <script src="../src/js/App.jsx"></script>
 </body>
 
 </html>
