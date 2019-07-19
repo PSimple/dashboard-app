@@ -6,9 +6,7 @@ import PageTitle from '../PageTitle';
 const Main = () => (
   <main className="main-wrapper">
     <ContentWrapper className="page-title">
-      <PageTitle></PageTitle>
-    </ContentWrapper>
-    <ContentWrapper className="small-widgets__controller">
+      <PageTitle />
     </ContentWrapper>
   </main>
 );

@@ -30,7 +30,7 @@ const Navigation = () => (
   <nav className="navigation">
     <ContentWrapper className="navigation__content">
       {linksData.map(item => (
-        <Link key={item.title} className="navigation__link" href="{item.href}">{item.title}</Link>
+        <Link key={item.title} className="navigation__link" href={item.href}>{item.title}</Link>
       ))}
     </ContentWrapper>
   </nav>
