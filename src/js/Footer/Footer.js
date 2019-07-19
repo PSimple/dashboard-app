@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ContentWrapper from '../ContentWrapper';
 import Link from '../Link';
 
@@ -24,7 +23,7 @@ const linksData = [
 
 const Footer = () => (
   <footer className="footer">
-    <ContentWrapper className="footer__content">
+    <ContentWrapper className="content-wrapper">
       <div className="footer__links-container">
         {linksData.map(item => (
           <Link key={item.title} className="footer__link" href="{item.href}">{item.title}</Link>
@@ -36,9 +35,5 @@ const Footer = () => (
     </ContentWrapper>
   </footer>
 );
-
-Footer.propTypes = {
-  children: PropTypes.element,
-};
 
 export default Footer;

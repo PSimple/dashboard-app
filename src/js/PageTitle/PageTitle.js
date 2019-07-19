@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from '../Link';
 
 const linksData = [
@@ -32,9 +31,5 @@ const PageTitle = () => (
     </ul>
   </header>
 );
-
-PageTitle.propTypes = {
-  children: PropTypes.element,
-};
 
 export default PageTitle;
