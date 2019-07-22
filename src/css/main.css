@@ -1,4 +1,4 @@
-@import-normalize;
+@import "normalize.css";
 @import "./variables.css";
 
 a {
@@ -287,10 +287,14 @@ a {
 .content-wrapper {
   height: 100%;
   width: var(--default-width);
-  display: flex;
-  justify-content: space-between;
   margin: 0 auto;
-  align-items: center;
+
+  &--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
   &--left-justify {
     justify-content: flex-start;
