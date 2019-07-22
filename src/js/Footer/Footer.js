@@ -23,10 +23,10 @@ const linksData = [
 
 const Footer = () => (
   <footer className="footer">
-    <ContentWrapper className="content-wrapper">
+    <ContentWrapper>
       <div className="footer__links-container">
         {linksData.map(item => (
-          <Link key={item.title} className="footer__link" href="{item.href}">{item.title}</Link>
+          <Link key={item.title} className="footer__link" href={item.href}>{item.title}</Link>
         ))}
       </div>
       <span className="footer__description">

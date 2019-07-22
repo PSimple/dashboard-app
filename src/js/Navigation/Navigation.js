@@ -27,7 +27,7 @@ const linksData = [
 
 const Navigation = () => (
   <nav className="navigation">
-    <ContentWrapper className="content-wrapper content-wrapper--left-justify">
+    <ContentWrapper className="content-wrapper--left-justify">
       {linksData.map(item => (
         <Link key={item.title} className="navigation__link" href={item.href}>
           {item.title}
