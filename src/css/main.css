@@ -346,6 +346,16 @@ a {
         color: var(--alto);
         transition: all .3s ease-in;
       }
+      &::after {
+        display: inline-block;
+        content: '/';
+        padding: 0 5px;
+        font-size: inherit;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
     }
   }
 }
