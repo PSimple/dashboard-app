@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Link.css';
 
 const Link = ({ href, children, className }) => (
-  <a className={className} href={href}>{children}</a>
+  <a className={styles[className]} href={href}>{children}</a>
 );
 
 Link.propTypes = {

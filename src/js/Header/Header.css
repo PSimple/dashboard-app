@@ -1,0 +1,17 @@
+.header {
+  color: var(--alto);
+  height: 75px;
+}
+
+.left-side {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-side {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  position: relative;
+}

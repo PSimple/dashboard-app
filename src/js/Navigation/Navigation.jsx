@@ -1,6 +1,7 @@
 import React from 'react';
 import ContentWrapper from '../ContentWrapper';
 import Link from '../Link';
+import styles from './Navigation.css';
 
 const linksData = [
   {
@@ -26,10 +27,10 @@ const linksData = [
 ];
 
 const Navigation = () => (
-  <nav className="navigation">
-    <ContentWrapper className="content-wrapper--left-justify">
+  <nav className={styles.navigation}>
+    <ContentWrapper leftJustify>
       {linksData.map(item => (
-        <Link key={item.title} className="navigation__link" href={item.href}>
+        <Link key={item.title} className="navigation" href={item.href}>
           {item.title}
         </Link>
       ))}

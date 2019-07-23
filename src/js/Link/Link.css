@@ -1,0 +1,51 @@
+.navigation {
+  margin-right: 30px;
+  position: relative;
+  transition: all .2s ease-out;
+  pointer-events: all;
+
+  &:hover {
+    color: var(--pattens-blue);
+    transition: all .3s ease-in;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      top: 36px;
+      left: calc(50% - 10px);
+      border-radius: 1.5px;
+      background-color: var(--hawkes-blue);
+    }
+  }
+}
+
+.footer {
+  margin-right: 30px;
+  transition: all .2s ease-out;
+
+  &:hover {
+    color: var(--pattens-blue);
+    transition: all .3s ease-in;
+  }
+}
+
+.author {
+  color: #3491F8;
+  cursor: pointer;
+  transition: all .3s ease-out;
+
+  &:hover {
+    opacity: .7;
+    transition: all .3s ease-in;
+  }
+}
+
+.breadcrumb {
+  transition: all .3s ease-in;
+
+  &:hover {
+    color: var(--alto);
+    transition: all .3s ease-in;
+  }
+}

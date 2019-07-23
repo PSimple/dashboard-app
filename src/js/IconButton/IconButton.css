@@ -1,0 +1,24 @@
+.button {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  background: url('../../img/menu.svg') no-repeat center;
+  margin-left: 60px;
+}
+
+.message {
+  background: url('../../img/message.svg') no-repeat center;
+}
+
+.notification {
+  background: url('../../img/notification.svg') no-repeat center;
+}
+
+.grid {
+  background: url('../../img/grid.svg') no-repeat center;
+}
