@@ -9,7 +9,7 @@ const ProfileMenu = ({ user = { name: 'Luke Brown', profilePhoto } }) => {
 
   return (
     <button className={styles.profile} onClick={() => { setIsOpen(!isOpen); }}>
-      <i className={cn(styles['right-arrow'], { [styles['is-open']]: isOpen })}></i>
+      <i className={cn(styles.arrow, { [styles.open]: isOpen })}></i>
       <span className={styles.title}>{user.name}</span>
       <img src={user.profilePhoto}></img>
     </button>

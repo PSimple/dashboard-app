@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './ContentWrapper.css';
 
-const ContentWrapper = ({ children, leftJustify }) => {
+const ContentWrapper = ({ children, leftJustify = false }) => {
   const classNames = cn(
-    styles['content-wrapper'],
+    styles.wrapper,
     { [styles['left-justify']]: leftJustify },
   );
   return <div className={classNames}>{children}</div>;

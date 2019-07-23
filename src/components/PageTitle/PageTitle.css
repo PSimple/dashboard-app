@@ -1,4 +1,4 @@
-.page-title {
+.title {
   height: 66px;
   width: var(--default-width);
   margin: 48px auto 36px;
@@ -39,7 +39,7 @@
   font-weight: 100;
 }
 
-.breadcrumbs-item {
+.item {
   &::after {
     display: inline-block;
     content: '/';

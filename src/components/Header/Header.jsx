@@ -13,12 +13,12 @@ const Header = () => (
         <Link href='#' >
         <img src={logo}/>
         </Link>
-        <IconButton className='menu-toggle'/>
+        <IconButton className='menu-toggle' onClick={() => {}}/>
       </div>
       <div className={styles['right-side']}>
-        <IconButton className='message'/>
-        <IconButton className='notification'/>
-        <IconButton className='grid'/>
+        <IconButton className='message' onClick={() => {}}/>
+        <IconButton className='notification' onClick={() => {}}/>
+        <IconButton className='grid' onClick={() => {}}/>
         <ProfileMenu/>
       </div>
     </ContentWrapper>

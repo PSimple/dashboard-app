@@ -18,7 +18,7 @@ const linksData = [
 ];
 
 const PageTitle = () => (
-  <section className={styles['page-title']}>
+  <section className={styles.title}>
     <header className={styles.container}>
       <div>
         <span className={styles.subtitle}>overview</span>
@@ -26,7 +26,7 @@ const PageTitle = () => (
       </div>
       <ul className={styles.breadcrumbs}>
         {linksData.map(item => (
-          <li key={item.title} className={styles['breadcrumbs-item']}>
+          <li key={item.title} className={styles.tem}>
             <Link href={item.href} className='breadcrumb'>{item.title}</Link>
           </li>
         ))}

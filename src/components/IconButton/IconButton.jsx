@@ -12,7 +12,7 @@ const IconButton = ({ className, onClick }) => (
 
 IconButton.propTypes = {
   className: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default IconButton;

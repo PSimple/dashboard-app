@@ -10,27 +10,17 @@
   font-family: Helvetica, sans-serif;
 }
 
-
 .title {
   padding: 0 10px 0 5px;
 }
 
 .arrow {
-  font-size: 20px;
-  width: 12px;
-  height: 6px;
-  display: inline-block;
-  position: relative;
-  margin: 0 3px;
-}
-
-.right-arrow {
   display: inline-block;
   background: url('../../img/down_arrow.svg');
   width: 11px;
   height: 6px;
 }
 
-.is-open {
+.open {
   transform: rotate(180deg);
 }
