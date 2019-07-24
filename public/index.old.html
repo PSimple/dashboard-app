@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../src/css/main.css">
+</head>
+
+<body class="body">
+  <div id="root"></div>
+  <div class="popup__overlay"></div>
+  <header class="header">
+    <div class="content-wrapper">
+      <div class="header__leftside">
+        <a href="#" class="logo"><img src="../src/img/logo.svg" alt=""></a>
+        <button class="header__button header__button--menu-toggle"></button>
+      </div>
+      <div class="header__rightside">
+        <button class="header__button header__button--message"></button>
+        <button class="header__button header__button--notification"></button>
+        <button class="header__button header__button--grid"></button>
+        <button class="header__profile">
+          <i class="header__profile--arrow"></i>
+          <span class="header__profile--title">Luke Brown</span>
+          <img src="../src/img/profile.png" alt="">
+        </button>
+        <div class="popup popup__grid">
+          <div class="popup__container">
+            <a href="#" class="popup__item">
+              <img src="../src/img/github.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Github</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="../src/img/bitbucket.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Bitbucket</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="../src/img/slack.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Slack</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="../src/img/mailchimp.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Mailchimp</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="../src/img/asana.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Asana</span>
+            </a>
+            <a href="#" class="popup__item">
+              <img src="../src/img/intercom.png" alt="" class="popup__item--icon">
+              <span class="popup__item--title">Intercom</span>
+            </a>
+          </div>
+        </div>
+        <div class="popup popup__profile">
+          <ul class="popup__list">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Personal Info</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="navigation">
+    <section class="content-wrapper content-wrapper--left-justify">
+      <a class="navigation__link" href="#">Dashboard</a>
+      <a class="navigation__link" href="#">Projects</a>
+      <a class="navigation__link" href="#">Invoices</a>
+      <a class="navigation__link" href="#">Documents</a>
+      <a class="navigation__link" href="#">Settings</a>
+    </section>
+  </nav>
+  <main>
+    <section class="page-title">
+      <header class="page-title__container">
+        <h1 class="page-title__text"><span class="page-title__subtitle">overview</span>Dashboard</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a href="#">Lint</a></li>&nbsp;/&nbsp;
+          <li class="breadcrumbs__item"><a href="#">Dashboard</a></li>&nbsp;/&nbsp;
+          <li class="breadcrumbs__item"><a href="#">Overview</a></li>
+        </ul>
+      </header>
+    </section>
+    <section class="small-widgets__controller">
+      <ul>
+        <li>
+          <input class="small-widgets__checkbox" type="checkbox" name="budget" checked="checked" id="budgetControl">
+          <label for="budgetControl">Toggle budget</label>
+        </li>
+        <li>
+          <input class="small-widgets__checkbox" type="checkbox" name="operations" checked="checked"
+            id="operationsControl">
+          <label for="operationsControl">Toggle operations</label>
+        </li>
+        <li>
+          <input class="small-widgets__checkbox" type="checkbox" name="requests" checked="checked" id="requestsControl">
+          <label for="requestsControl">Toggle requests</label>
+        </li>
+        <li>
+          <input class="small-widgets__checkbox" type="checkbox" name="progress" checked="checked" id="progressControl">
+          <label for="progressControl">Toggle progress</label>
+        </li>
+      </ul>
+    </section>
+    <section class="small-widgets">
+      <div data-name="budget" class="small-widgets__item small-widgets__item--dollar">
+        <span class="small-widgets__title">Budget</span>
+        <div>
+          <span class="small-widgets__value" id="budget__value"></span>
+          <span class="small-widgets__badge" id="budget__percents"></span>
+        </div>
+      </div>
+      <div data-name="operations" class="small-widgets__item small-widgets__item--repair">
+        <span class="small-widgets__title">OPERATIONS</span>
+        <div>
+          <span class="small-widgets__value" id="operations__value"></span>
+        </div>
+      </div>
+      <div data-name="requests" class="small-widgets__item small-widgets__item--arrows">
+        <span class="small-widgets__title">REQUESTS</span>
+        <div>
+          <span class="small-widgets__value" id="requests__value"></span>
+          <span class="small-widgets__badge" id="requests__percents"></span>
+        </div>
+      </div>
+      <div data-name="progress" class="small-widgets__item small-widgets__item--clock">
+        <span class="small-widgets__title">PROGRESS</span>
+        <div>
+          <span class="small-widgets__value" id="progress__value"></span>
+          <div class="small-widgets__progressbar">
+            <span class="small-widgets__progressbar--progress" id="progress__bar"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projection">
+      <div class="block-header">
+        <span class="widget-title">Projection</span>
+        <div class="block-header__icon-wrapper">
+          <i class="block-header__icon-wrapper__icon more-icon"></i>
+        </div>
+      </div>
+      <img class="projection__image" src="../src/img/chart.png"></img>
+    </section>
+    <section class="medium-widgets">
+      <div class="medium-widgets__block medium-widgets__balance">
+        <div class="block-header block-header--medium">
+          <span class="widget-title">Balance</span>
+          <div class="block-header__icon-wrapper">
+            <button class="block-header__icon-wrapper__icon info-icon"></button>
+          </div>
+        </div>
+        <div class="medium-widgets__balance--sum">
+          $183,927
+        </div>
+        <div class="medium-widgets__balance--stats">
+          <div class="medium-widgets__balance--column">
+            Last Month
+            <span class="medium-widgets__balance--stat">$120,124</span>
+          </div>
+          <div class="medium-widgets__balance--column">
+            This Month
+            <span class="medium-widgets__balance--stat">$203,890</span>
+          </div>
+        </div>
+        <div class="medium-widgets__balance--dynamic">
+          + 23,91%
+        </div>
+      </div>
+      <div class="medium-widgets__block medium-widgets__visitors">
+        <div class="block-header block-header--medium">
+          <span class="widget-title">Visitors</span>
+          <div class="block-header__icon-wrapper">
+            <i class="block-header__icon-wrapper__icon refresh-icon"></i>
+            <i class="block-header__icon-wrapper__icon info-icon"></i>
+          </div>
+        </div>
+        <img class="medium-widgets__visitors__image" src="../src/img/graph.png"></img>
+      </div>
+      <div class="medium-widgets__block medium-widgets__score">
+        <div class="block-header block-header--medium">
+          <span class="widget-title">Score</span>
+        </div>
+        <div class="medium-widgets__score__dynamic medium-widgets__score__dynamic--grow"><i
+            class="dynamic-icon dynamic-icon--grow"></i>+12pts</div>
+        <div class="medium-widgets__score__period">THIS WEEK</div>
+        <img class="medium-widgets__score__image" src="../src/img/score_chart.png"></img>
+      </div>
+      <div class="medium-widgets__block medium-widgets__banner">
+        <span class="medium-widgets__banner__header">FROM OUR BLOG</span>
+        <span class="medium-widgets__banner__title">Urgent ! We Updated Our ToS</span>
+        <span class="medium-widgets__banner__text">Hello, we just updated our tos ..</span>
+        <span class="medium-widgets__banner__link">READ MORE</span>
+        <img src="../src/img/blog_image.svg" class="medium-widgets__banner__image"></img>
+      </div>
+    </section>
+    <section class="large-widgets">
+      <div class="large-widgets__block large-widgets__data-centers">
+        <div class="block-header block-header--medium">
+          <span class="widget-title">Data Centers</span>
+          <div class="block-header__icon-wrapper">
+            <i class="block-header__icon-wrapper__icon refresh-icon"></i>
+            <i class="block-header__icon-wrapper__icon info-icon"></i>
+          </div>
+        </div>
+        <img src="../src/img/data_centers.svg" class="large-widgets__data-centers__image"></img>
+      </div>
+      <div class="large-widgets__block latest-commits">
+        <div class="block-header">
+          <span class="widget-title">Latest Commits</span>
+          <div class="block-header__icon-wrapper">
+            <button class="block-header__icon-wrapper__icon refresh-icon"></button>
+            <button class="block-header__icon-wrapper__icon info-icon"></button>
+          </div>
+        </div>
+        <div class="commits-table" id="latest-commits-table">
+          <ul class="commits-table__row">
+            <li class="commits-table__cell commits-table__cell--message"></li>
+            <li class="commits-table__cell commits-table__cell--time"></li>
+            <li class="commits-table__cell commits-table__cell--icon-arrow-right"></li>
+          </ul>
+          <ul class="commits-table__row">
+            <li class="commits-table__cell commits-table__cell--message"></li>
+            <li class="commits-table__cell commits-table__cell--time"></li>
+            <li class="commits-table__cell commits-table__cell--icon-arrow-right"></li>
+          </ul>
+          <ul class="commits-table__row">
+            <li class="commits-table__cell commits-table__cell--message"></li>
+            <li class="commits-table__cell commits-table__cell--time"></li>
+            <li class="commits-table__cell commits-table__cell--icon-arrow-right"></li>
+          </ul>
+          <ul class="commits-table__row">
+            <li class="commits-table__cell commits-table__cell--message"></li>
+            <li class="commits-table__cell commits-table__cell--time"></li>
+            <li class="commits-table__cell commits-table__cell--icon-arrow-right"></li>
+          </ul>
+          <ul class="commits-table__row">
+            <li class="commits-table__cell commits-table__cell--message"></li>
+            <li class="commits-table__cell commits-table__cell--time"></li>
+            <li class="commits-table__cell commits-table__cell--icon-arrow-right"></li>
+          </ul>
+          <ul class="commits-table__row">
+            <li class="commits-table__cell commits-table__cell--message"></li>
+            <li class="commits-table__cell commits-table__cell--time"></li>
+            <li class="commits-table__cell commits-table__cell--icon-arrow-right"></li>
+          </ul>
+          <ul class="commits-table__row">
+            <li class="commits-table__cell commits-table__cell--message"></li>
+            <li class="commits-table__cell commits-table__cell--time"></li>
+            <li class="commits-table__cell commits-table__cell--icon-arrow-right"></li>
+          </ul>
+        </div>
+        <a class="latest-commits__footer-link">VIEW ALL</a>
+      </div>
+      <div class="large-widgets__block large-widgets__aot">
+        <div class="large-widgets__title">
+          Average Operation Time
+        </div>
+        <div class="large-widgets__data">
+          <div class="large-widgets__col">
+            <div class="large-widgets__item large-widgets__item--read">
+              <span class="large-widgets__item--label">Read</span>
+              <span class="large-widgets__item--value">5.32 ms</span>
+            </div>
+            <div class="large-widgets__item large-widgets__item--write">
+              <span class="large-widgets__item--label">Write</span>
+              <span class="large-widgets__item--value">15.32 ms</span>
+            </div>
+          </div>
+          <div class="large-widgets__col">
+            <div class="large-widgets__item large-widgets__item--upload">
+              <span class="large-widgets__item--label">Upload</span>
+              <span class="large-widgets__item--value">5.3 gbs</span>
+            </div>
+            <div class="large-widgets__item large-widgets__item--download">
+              <span class="large-widgets__item--label">Download</span>
+              <span class="large-widgets__item--value">1.2 gbs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="latest-projects">
+      <div class="latest-projects__wrapper">
+        <div class="latest-projects__title">
+          <span>Latest Projects</span>
+          <button class="latest-projects__more more-icon"></button>
+        </div>
+        <div class="projects-table" id="projects-table">
+          <ul class="projects-table__head">
+            <li class="projects-table__cell">Name</li>
+            <li class="projects-table__cell">Project</li>
+            <li class="projects-table__cell">Start Date</li>
+            <li class="projects-table__cell">End Date</li>
+            <li class="projects-table__cell">Status</li>
+          </ul>
+          <ul class="projects-table__row">
+            <li class="projects-table__cell">
+          <img src="../src/img/profile.png" class="dirty-hack"/>
+            </li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell projects-table__cell--started"></li>
+          </ul>
+          <ul class="projects-table__row">
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell projects-table__cell--started"></li>
+          </ul>
+          <ul class="projects-table__row">
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell projects-table__cell--started"></li>
+          </ul>
+          <ul class="projects-table__row">
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell projects-table__cell--started"></li>
+          </ul>
+          <ul class="projects-table__row">
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell projects-table__cell--started"></li>
+          </ul>
+          <ul class="projects-table__row">
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell"></li>
+            <li class="projects-table__cell projects-table__cell--started"></li>
+          </ul>
+        </div>
+        <div class="latest-projects__nav">
+          <div class="latest-projects__nav--pages">1 IN 15 PAGES</div>
+          <div class="latest-projects__nav--panel">
+            <button class="latest-projects__nav--button button-disabled">PREVIOUS ENTRIES</button>
+            <button class="latest-projects__nav--button">NEXT ENTRIES</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="content-wrapper">
+      <div class="footer__links-container">
+        <a class="footer__link" href="#">Support</a>
+        <a class="footer__link" href="#">Help Center</a>
+        <a class="footer__link" href="#">Privacy</a>
+        <a class="footer__link" href="#">Terms of Service</a>
+      </div>
+      <span class="footer__description">
+        Lint, a FREE dashboard by <a href="#" class="footer__author-link">Piksl</a>
+      </span>
+    </section>
+  </footer>
+  <script src="../src/js/App.js"></script>
+</body>
+
+</html>

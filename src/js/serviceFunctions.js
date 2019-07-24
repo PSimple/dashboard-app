@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-const setHtmlIntoElement = (element, html) => {
-  element.innerHTML = html;
+const setHtmlIntoElement = (e, html) => {
+  e.innerHTML = html;
 };
-
 
 const fetchData = async (url) => {
   try {

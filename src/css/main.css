@@ -1085,7 +1085,7 @@ a {
       display: none;
       position: relative;
       content: '';
-      left: -155%;
+      left: calc(50% - 19px);
       transition: all .5s ease-out;
       opacity: 0;
     }
