@@ -1,6 +1,7 @@
 import React from 'react';
 import ContentWrapper from '../ContentWrapper';
 import Link from '../Link';
+import styles from './Footer.css';
 
 const linksData = [
   {
@@ -22,15 +23,15 @@ const linksData = [
 ];
 
 const Footer = () => (
-  <footer className="footer">
+  <footer className={styles.footer}>
     <ContentWrapper>
-      <div className="footer__links-container">
+      <div className={styles.container}>
         {linksData.map(item => (
-          <Link key={item.title} className="footer__link" href={item.href}>{item.title}</Link>
+          <Link key={item.title} href={item.href} className='footer'>{item.title}</Link>
         ))}
       </div>
-      <span className="footer__description">
-        Lint, a FREE dashboard by <Link className="footer__author-link" href="#">Piksl</Link>
+      <span>
+        Lint, a FREE dashboard by <Link href="#" className='author'>Piksl</Link>
       </span>
     </ContentWrapper>
   </footer>

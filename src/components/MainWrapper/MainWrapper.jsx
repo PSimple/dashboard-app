@@ -3,7 +3,7 @@ import ContentWrapper from '../ContentWrapper';
 import PageTitle from '../PageTitle';
 
 const Main = () => (
-  <main className="main-wrapper">
+  <main>
     <ContentWrapper>
       <PageTitle />
     </ContentWrapper>
