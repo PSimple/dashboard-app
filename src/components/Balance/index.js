@@ -1,3 +1,1 @@
-import Balance from './Balance.jsx';
-
-export default Balance;
+export { default } from './Balance.jsx';

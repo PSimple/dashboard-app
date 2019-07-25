@@ -3,21 +3,16 @@ import cn from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './BlockHeader.css';
 
-const BlockHeader = ({ children }) => {
-  const [title, ...rest] = children;
-  const isString = typeof children === 'string';
-  return (
-    <div className={cn(styles.wrapper, styles.medium)}>
-      <span className={styles.title}>{isString ? children : title}</span>
-        {!isString
-          ? <div className={styles.icons}>{rest}</div>
-          : ''}
-    </div>
-  );
-};
+const BlockHeader = ({ children, title }) => (
+  <div className={cn(styles.wrapper, styles.medium)}>
+    <span className={styles.title}>{title}</span>
+    <div className={styles.icons}>{children}</div>
+  </div>
+);
 
 BlockHeader.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
+  children: PropTypes.PropTypes.array,
+  title: PropTypes.string.isRequired,
 };
 
 export default BlockHeader;

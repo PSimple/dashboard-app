@@ -3,11 +3,11 @@ import cn from 'classnames';
 import styles from './Score.css';
 import BlockHeader from '../BlockHeader';
 
-const scoreChart = require('../../img/score_chart.png');
+import scoreChart from '../../img/score_chart.png';
 
 const Score = () => (
   <div className={styles.container}>
-    <BlockHeader>Score</BlockHeader>
+    <BlockHeader title='Score' />
     <div className={cn(styles.dynamic, styles['dynamic--grow'])}><i
         className={cn(styles.icon, styles['icon--grow'])}></i>+12pts</div>
     <div className={styles.period}>THIS WEEK</div>

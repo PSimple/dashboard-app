@@ -2,12 +2,18 @@ import React from 'react';
 import LatestCommitsTable from '../LatestCommitsTable';
 import styles from './LatestCommitsSection.css';
 import BlockHeader from '../BlockHeader';
+import IconButton from '../IconButton';
+import Link from '../Link';
+
 
 const LatestCommitsSection = () => (
   <div className={styles.container}>
-    <BlockHeader>Lastest Commits</BlockHeader>
+    <BlockHeader title='Lastest Commits'>
+      <IconButton className='info' onClick={() => {}}/>
+      <IconButton className='refresh' onClick={() => {}}/>
+    </BlockHeader>
     <LatestCommitsTable />
-    <a className={styles['footer-link']}>VIEW ALL</a>
+    <Link href="#" className='view-all'>VIEW ALL</Link>
   </div>
 );
 

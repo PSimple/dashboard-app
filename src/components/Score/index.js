@@ -1,3 +1,1 @@
-import Score from './Score.jsx';
-
-export default Score;
+export { default } from './Score.jsx';

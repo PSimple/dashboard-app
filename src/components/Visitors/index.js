@@ -1,3 +1,1 @@
-import Visitors from './Visitors.jsx';
-
-export default Visitors;
+export { default } from './Visitors.jsx';

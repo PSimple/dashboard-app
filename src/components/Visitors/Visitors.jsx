@@ -1,12 +1,16 @@
 import React from 'react';
 import styles from './Visitors.css';
 import BlockHeader from '../BlockHeader';
+import IconButton from '../IconButton';
 
-const graph = require('../../img/graph.png');
+import graph from '../../img/graph.png';
 
 const Visitors = () => (
   <div className={styles.container}>
-    <BlockHeader>Visitors</BlockHeader>
+    <BlockHeader title='Visitors'>
+      <IconButton className='info' onClick={() => {}}/>
+      <IconButton className='refresh' onClick={() => {}}/>
+    </BlockHeader>
     <img src={graph} />
   </div>
 );

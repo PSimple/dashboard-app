@@ -1,12 +1,16 @@
 import React from 'react';
 import styles from './DataCenters.css';
 import BlockHeader from '../BlockHeader';
+import IconButton from '../IconButton';
 
-const dataCenters = require('../../img/data_centers.svg');
+import dataCenters from '../../img/data_centers.svg';
 
 const DataCenters = () => (
   <div className={styles.container}>
-    <BlockHeader>Data Centers</BlockHeader>
+    <BlockHeader title='Data Centers'>
+      <IconButton className='info' onClick={() => {}}/>
+      <IconButton className='refresh' onClick={() => {}}/>
+    </BlockHeader>
     <img src={dataCenters} className={styles.image} />
   </div>
 );

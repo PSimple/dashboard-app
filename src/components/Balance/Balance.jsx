@@ -5,8 +5,7 @@ import styles from './Balance.css';
 
 const Balance = () => (
   <div className={styles.container}>
-    <BlockHeader>
-      {'Balance'}
+    <BlockHeader title='Balance'>
       <IconButton className='info' onClick={() => {}}/>
       <IconButton className='refresh' onClick={() => {}}/>
     </BlockHeader>
