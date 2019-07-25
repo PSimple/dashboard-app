@@ -1,10 +1,5 @@
 import axios from 'axios';
 
-const setHtmlIntoElement = (element, html) => {
-  element.innerHTML = html;
-};
-
-
 const fetchData = async (url) => {
   try {
     const {
@@ -16,4 +11,4 @@ const fetchData = async (url) => {
   }
 };
 
-export { setHtmlIntoElement, fetchData };
+export default fetchData;

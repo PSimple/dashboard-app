@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import '@babel/plugin-transform-runtime';
 import Navigation from '../Navigation';
 import MainWrapper from '../MainWrapper';
 import Footer from '../Footer';

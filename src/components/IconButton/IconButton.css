@@ -22,3 +22,52 @@
 .grid {
   background: url('../../img/grid.svg') no-repeat center;
 }
+
+
+.info {
+  background: url('../../img/info.svg') no-repeat;
+  width: 16px;
+  height: 16px;
+  transition: all .3s ease-out .1s;
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+
+  &:hover {
+    transition: all .3s ease-in;
+    opacity: .6;
+  }
+}
+
+.refresh {
+  background: url('../../img/refresh.svg') no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  transition: all .3s ease-out .1s;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+
+  &:hover {
+    transition: all .3s ease-in;
+    opacity: .6;
+  }
+}
+
+.more {
+  background: url('../../img/more.svg') no-repeat center;
+  display: inline-block;
+  width: 26px;
+  height: 20px;
+  transition: all .3s ease-out .1s;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+
+  &:hover {
+    transition: all .3s ease-in;
+    opacity: .6;
+  }
+}

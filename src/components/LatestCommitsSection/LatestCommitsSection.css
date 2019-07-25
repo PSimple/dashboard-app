@@ -1,0 +1,4 @@
+.container {
+  grid-column: 2;
+  composes: largeItem from "../MainWrapper/MainWrapper.css";
+}

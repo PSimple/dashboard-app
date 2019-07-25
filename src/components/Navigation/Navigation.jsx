@@ -28,7 +28,7 @@ const linksData = [
 
 const Navigation = () => (
   <nav className={styles.navigation}>
-    <ContentWrapper leftJustify>
+    <ContentWrapper leftJustify flex>
       {linksData.map(item => (
         <Link key={item.title} className="navigation" href={item.href}>
           {item.title}
