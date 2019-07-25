@@ -1,27 +1,29 @@
 import React from 'react';
+import BlockHeader from '../BlockHeader';
+import IconButton from '../IconButton';
+import styles from './Balance.css';
 
 const Balance = () => (
-  <div className="medium-widgets__block medium-widgets__balance">
-    <div className="block-header block-header--medium">
-      <span className="widget-title">Balance</span>
-      <div className="block-header__icon-wrapper">
-        <button className="block-header__icon-wrapper__icon info-icon"></button>
-      </div>
-    </div>
-    <div className="medium-widgets__balance--sum">
+  <div className={styles.container}>
+    <BlockHeader>
+      {'Balance'}
+      <IconButton className='info' onClick={() => {}}/>
+      <IconButton className='refresh' onClick={() => {}}/>
+    </BlockHeader>
+    <div className={styles.sum}>
       $183,927
     </div>
-    <div className="medium-widgets__balance--stats">
-      <div className="medium-widgets__balance--column">
+    <div className={styles.stats}>
+      <div className={styles.column}>
         Last Month
-        <span className="medium-widgets__balance--stat">$120,124</span>
+        <span className={styles.stat}>$120,124</span>
       </div>
-      <div className="medium-widgets__balance--column">
+      <div className={styles.column}>
         This Month
-        <span className="medium-widgets__balance--stat">$203,890</span>
+        <span className={styles.stat}>$203,890</span>
       </div>
     </div>
-    <div className="medium-widgets__balance--dynamic">
+    <div className={styles.dynamic}>
       + 23,91%
     </div>
   </div>

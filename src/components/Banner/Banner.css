@@ -1,0 +1,43 @@
+.container {
+  grid-column: 3;
+  background: url('../../img/blog_background.svg');
+  position: relative;
+  composes: mediumItem from "../MainWrapper/MainWrapper.css";
+}
+
+.header {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.66);
+  margin-bottom: 13px;
+}
+
+.title {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 16px;
+  color: #97D4F0;
+  margin-bottom: 15px;
+  max-width: 128px;
+}
+
+.link {
+  font-size: 12px;
+  color: #51FBEC;
+  cursor: pointer;
+  transition: all .3s ease-out;
+
+  &:hover {
+    opacity: .7;
+    transition: all .3s ease-in;
+  }
+}
+
+.image {
+  position: absolute;
+  bottom: 26px;
+  right: 26px;
+}

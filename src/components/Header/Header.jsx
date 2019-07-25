@@ -8,7 +8,7 @@ import ProfileMenu from '../ProfileMenu';
 
 const Header = () => (
   <header className={styles.header}>
-    <ContentWrapper>
+    <ContentWrapper flex>
       <div className={styles['left-side']}>
         <Link href='#' >
         <img src={logo}/>

@@ -24,7 +24,7 @@ const linksData = [
 
 const Footer = () => (
   <footer className={styles.footer}>
-    <ContentWrapper>
+    <ContentWrapper flex>
       <div className={styles.container}>
         {linksData.map(item => (
           <Link key={item.title} href={item.href} className='footer'>{item.title}</Link>

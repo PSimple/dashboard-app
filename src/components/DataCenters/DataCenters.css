@@ -1,0 +1,11 @@
+.container {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  composes: largeItem from "../MainWrapper/MainWrapper.css";
+}
+    
+.image {
+  position: absolute;
+  left: 55px;
+}

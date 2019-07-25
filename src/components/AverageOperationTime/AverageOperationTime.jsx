@@ -1,29 +1,31 @@
 import React from 'react';
+import cn from 'classnames';
+import styles from './AverageOperationTime.css';
 
 const AverageOperationTime = () => (
-  <div className="large-widgets__block large-widgets__aot">
-    <div className="large-widgets__title">
+  <div className={styles.container}>
+    <div className={styles.title}>
       Average Operation Time
     </div>
-    <div className="large-widgets__data">
-      <div className="large-widgets__col">
-        <div className="large-widgets__item large-widgets__item--read">
-          <span className="large-widgets__item--label">Read</span>
-          <span className="large-widgets__item--value">5.32 ms</span>
+    <div className={styles.data}>
+      <div className={styles.col}>
+        <div className={cn(styles.item, styles.read)}>
+          <span className={styles.label}>Read</span>
+          <span className={styles.value}>5.32 ms</span>
         </div>
-        <div className="large-widgets__item large-widgets__item--write">
-          <span className="large-widgets__item--label">Write</span>
-          <span className="large-widgets__item--value">15.32 ms</span>
+        <div className={cn(styles.item, styles.write)}>
+          <span className={styles.label}>Write</span>
+          <span className={styles.value}>15.32 ms</span>
         </div>
       </div>
-      <div className="large-widgets__col">
-        <div className="large-widgets__item large-widgets__item--upload">
-          <span className="large-widgets__item--label">Upload</span>
-          <span className="large-widgets__item--value">5.3 gbs</span>
+      <div className={styles.col}>
+        <div className={cn(styles.item, styles.upload)}>
+          <span className={styles.label}>Upload</span>
+          <span className={styles.value}>5.3 gbs</span>
         </div>
-        <div className="large-widgets__item large-widgets__item--download">
-          <span className="large-widgets__item--label">Download</span>
-          <span className="large-widgets__item--value">1.2 gbs</span>
+        <div className={cn(styles.item, styles.download)}>
+          <span className={styles.label}>Download</span>
+          <span className={styles.value}>1.2 gbs</span>
         </div>
       </div>
     </div>

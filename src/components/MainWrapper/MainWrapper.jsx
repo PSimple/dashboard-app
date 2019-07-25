@@ -1,15 +1,30 @@
 import React from 'react';
 import ContentWrapper from '../ContentWrapper';
 import PageTitle from '../PageTitle';
-import MediumGrid from './MediumGrid';
-import LargeGrid from './LargeGrid';
+import Balance from '../Balance';
+import Banner from '../Banner';
+import Visitors from '../Visitors';
+import Score from '../Score';
+import DataCenters from '../DataCenters';
+import LatestCommitsSection from '../LatestCommitsSection';
+import AverageOperationTime from '../AverageOperationTime';
+import styles from './MainWrapper.css';
 
 const MainWrapper = () => (
   <main>
     <ContentWrapper>
       <PageTitle />
-      <MediumGrid />
-      <LargeGrid />
+      <section className={styles['medium-wrapper']}>
+        <Balance />
+        <Visitors />
+        <Score />
+        <Banner />
+      </section>
+      <section className={styles['large-wrapper']}>
+        <DataCenters />
+        <LatestCommitsSection />
+        <AverageOperationTime />
+      </section>
     </ContentWrapper>
   </main>
 );

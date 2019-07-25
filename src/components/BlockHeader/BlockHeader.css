@@ -1,0 +1,27 @@
+.wrapper {
+  box-sizing: border-box;
+  padding: 24px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.icons {
+    display: inline-block;
+    * {
+      margin-right: 16px;   
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+}
+
+.medium {
+  padding: 0 0 29px 0;
+}
+
+.title {
+  font-size: 20px;
+  color: var(--blue-haze);
+  letter-spacing: 0;
+}
