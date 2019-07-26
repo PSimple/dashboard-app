@@ -8,8 +8,8 @@ import dataCenters from '../../img/data_centers.svg';
 const DataCenters = () => (
   <div className={styles.container}>
     <BlockHeader title='Data Centers'>
-      <IconButton className='info' onClick={() => {}}/>
-      <IconButton className='refresh' onClick={() => {}}/>
+      <IconButton type='info' onClick={() => {}}/>
+      <IconButton type='refresh' onClick={() => {}}/>
     </BlockHeader>
     <img src={dataCenters} className={styles.image} />
   </div>

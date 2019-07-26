@@ -9,7 +9,7 @@ const Banner = () => (
     <span className={styles.header}>FROM OUR BLOG</span>
     <span className={styles.title}>Urgent ! We Updated Our ToS</span>
     <span className={styles.text}>Hello, we just updated our tos ..</span>
-    <Link href="#" className='read-more'>READ MORE</Link>
+    <Link href="#" type='read-more'>READ MORE</Link>
     <img src={blogImage} className={styles.image} />
   </div>
 );

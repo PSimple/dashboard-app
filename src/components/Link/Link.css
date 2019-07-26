@@ -1,4 +1,10 @@
+.plain {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navigation {
+  composes: plain;
   margin-right: 30px;
   position: relative;
   transition: all .2s ease-out;
@@ -14,13 +20,14 @@
       height: 3px;
       top: 36px;
       left: calc(50% - 10px);
-      border-radius: 1.5px;
+      border-radius: 2px;
       background-color: var(--hawkes-blue);
     }
   }
 }
 
 .footer {
+  composes: plain;
   margin-right: 30px;
   transition: all .2s ease-out;
 
@@ -31,7 +38,8 @@
 }
 
 .author {
-  color: #3491F8;
+  composes: plain;
+  color: var(--alt-dodger-blue);
   cursor: pointer;
   transition: all .3s ease-out;
 
@@ -42,6 +50,7 @@
 }
 
 .breadcrumb {
+  composes: plain;
   transition: all .3s ease-in;
 
   &:hover {
@@ -51,8 +60,9 @@
 }
 
 .view-all {
+  composes: plain;
   font-size: 12px;
-  color: #3491F8;
+  color: var(--alt-dodger-blue);
   cursor: pointer;
   transition: all .3s ease-out;
 
@@ -63,13 +73,29 @@
 }
 
 .read-more {
+  composes: plain;
   font-size: 12px;
-  color: #51FBEC;
+  color: var(--aquamarine);
   cursor: pointer;
   transition: all .3s ease-out;
 
   &:hover {
     opacity: .7;
     transition: all .3s ease-in;
+  }
+}
+
+.icon-item {
+  composes: plain;
+  height: 98px;
+  width: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+
+  &:hover {
+    background: rgba(25, 29, 40, 0.35);
+    border-radius: 4px;
   }
 }

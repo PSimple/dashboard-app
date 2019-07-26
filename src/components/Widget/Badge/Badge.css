@@ -1,0 +1,19 @@
+.badge {
+  font-size: 14px;
+  color: var(--white);
+  line-height: 16px;
+  padding: 4px 10px;
+  display: inline-block;
+  font-weight: 200;
+  border-radius: 12px;
+  vertical-align: middle;
+  margin: 0 0 7px 17px;
+}
+
+.positive {
+  background-color: var(--lima);
+}
+
+.negative {
+  background-color: var(--red-orange);
+}

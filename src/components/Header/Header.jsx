@@ -5,23 +5,26 @@ import Link from '../Link';
 import logo from '../../img/logo.svg';
 import IconButton from '../IconButton';
 import ProfileMenu from '../ProfileMenu';
+import Popup from '../Popup';
+import icons from '../../fixtures/popupIcons';
 
 const Header = () => (
   <header className={styles.header}>
     <ContentWrapper flex>
       <div className={styles['left-side']}>
         <Link href='#' >
-        <img src={logo}/>
+          <img src={logo}/>
         </Link>
-        <IconButton className='menu-toggle' onClick={() => {}}/>
+        <IconButton type='menu-toggle' onClick={() => {}}/>
       </div>
       <div className={styles['right-side']}>
-        <IconButton className='message' onClick={() => {}}/>
-        <IconButton className='notification' onClick={() => {}}/>
-        <IconButton className='grid' onClick={() => {}}/>
+        <IconButton type='message' onClick={() => {}}/>
+        <IconButton type='notification' onClick={() => {}}/>
+        <IconButton data-tip type='grid' onClick={() => {}}/>
         <ProfileMenu/>
       </div>
     </ContentWrapper>
+      <Popup icons={icons}/>
   </header>
 );
 

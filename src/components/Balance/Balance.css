@@ -39,7 +39,7 @@
 }
 
 .dynamic {
-  background-image: linear-gradient(135deg, var(--lima) 0%, #48AF1B 100%);
+  background-image: linear-gradient(135deg, var(--lima) 0%, var(--vida-loca) 100%);
   border-radius: 19px;
   font-size: 18px;
   color: var(--white);

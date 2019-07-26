@@ -1,0 +1,12 @@
+.container {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--ebony-clay-light) !important;
+  opacity: 1 !important;
+  border-radius: 4px;
+
+  &:after {
+    border-bottom-color: var(--ebony-clay-light) !important;
+  }
+}

@@ -27,11 +27,11 @@ const Footer = () => (
     <ContentWrapper flex>
       <div className={styles.container}>
         {linksData.map(item => (
-          <Link key={item.title} href={item.href} className='footer'>{item.title}</Link>
+          <Link key={item.title} href={item.href} type='footer'>{item.title}</Link>
         ))}
       </div>
       <span>
-        Lint, a FREE dashboard by <Link href="#" className='author'>Piksl</Link>
+        Lint, a FREE dashboard by <Link href="#" type='author'>Piksl</Link>
       </span>
     </ContentWrapper>
   </footer>

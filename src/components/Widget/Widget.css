@@ -1,0 +1,48 @@
+.item {
+  height: 102px;
+  width: 263px;
+  padding: 20px;
+  background-color: var(--ebony-clay-light);
+  color: var(--gull-gray);
+  box-sizing: border-box;
+  letter-spacing: 0;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) 10px;
+  border-radius: 4px;
+  transition: all .3s ease-out .1s;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.60);
+    transition: all .3s ease-in;
+  }
+}
+
+.title {
+  display: inline-block;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 28px;
+  color: var(--blue-haze);
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.budget {
+  background-image: url('../../img/widget_budget.png');
+}
+
+.operations {
+  background-image: url('../../img/widget_operations.png');
+}
+
+.requests {
+  background-image: url('../../img/widget_requests.png');
+}
+
+.progress {
+  background-image: url('../../img/widget_progress.png');
+}

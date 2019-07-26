@@ -1,0 +1,17 @@
+.container {
+  margin: 36px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: var(--default-width);
+  column-gap: 28px;
+}
+
+.controls {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  display: inline-block;
+}
