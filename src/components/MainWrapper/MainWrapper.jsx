@@ -9,6 +9,7 @@ import DataCenters from '../DataCenters';
 import LatestCommitsSection from '../LatestCommitsSection';
 import AverageOperationTime from '../AverageOperationTime';
 import styles from './MainWrapper.css';
+import LatestProjectsSection from '../LatestProjectsSection';
 
 const MainWrapper = () => (
   <main>
@@ -25,6 +26,7 @@ const MainWrapper = () => (
         <LatestCommitsSection />
         <AverageOperationTime />
       </section>
+      <LatestProjectsSection />
     </ContentWrapper>
   </main>
 );
