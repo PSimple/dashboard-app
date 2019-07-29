@@ -6,11 +6,10 @@
   padding: 24px;
   box-shadow: 0 5px 10px -10px rgba(0, 0, 0, 0.50);
   border-radius: 4px;
-  transition: all .3s ease-out .1s;
+  transition: box-shadow .3s ease-out .1s;
 
   &:hover {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.60);
-    transition: all .3s ease-in;
   }
 }
 
@@ -32,18 +31,17 @@
   background: none;
   border: 0;
   cursor: pointer;
-  transition: all .3s ease-out;
+  transition: opacity .3s ease-out;
 
   &:hover {
     opacity: .7;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    cursor: default;
+    color: var(--blue-haze);
+    opacity: 1;
     transition: all .3s ease-in;
   }
-}
-
-.disabled,
-.disabled:hover {
-  cursor: default;
-  color: var(--blue-haze);
-  opacity: 1;
-  transition: all .3s ease-in;
 }
