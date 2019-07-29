@@ -2,6 +2,7 @@
   height: 100%;
   width: var(--default-width);
   margin: 0 auto;
+  flex: 1;
 }
 
 .flex {

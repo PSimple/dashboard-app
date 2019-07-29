@@ -51,3 +51,12 @@
     display: none;
   }
 }
+
+.navlink {
+  composes: plain from '../Link/Link.css';
+  transition: color .3s ease-in;
+
+  &:hover {
+    color: var(--alto);
+  }
+}

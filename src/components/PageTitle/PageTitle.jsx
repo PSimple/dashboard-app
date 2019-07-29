@@ -1,33 +1,26 @@
 import React from 'react';
-import Link from '../Link';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styles from './PageTitle.css';
 
-const linksData = [
-  {
-    title: 'Lint',
-    href: '#',
-  },
-  {
-    title: 'Dashboard',
-    href: '#',
-  },
-  {
-    title: 'Overview',
-    href: '#',
-  },
-];
+import filterByLocation from './filterByLocation.jsx';
 
-const PageTitle = () => (
+const PageTitle = ({ title, navLinks }) => (
   <section className={styles.title}>
     <header className={styles.container}>
       <div>
         <span className={styles.subtitle}>overview</span>
-        <h1 className={styles.text}>Dashboard</h1>
+        <h1 className={styles.text}>{title}</h1>
       </div>
       <ul className={styles.breadcrumbs}>
-        {linksData.map(item => (
-          <li key={item.title} className={styles.item}>
-            <Link href={item.href} type='breadcrumb'>{item.title}</Link>
+        {navLinks.map(link => (
+          <li key={link.title} className={styles.item}>
+            <Link
+              to={link.route}
+              className={styles.navlink}
+            >
+              {link.title}
+            </Link>
           </li>
         ))}
       </ul>
@@ -35,4 +28,9 @@ const PageTitle = () => (
   </section>
 );
 
-export default PageTitle;
+PageTitle.propTypes = {
+  title: PropTypes.string,
+  navLinks: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+};
+
+export default filterByLocation(PageTitle);

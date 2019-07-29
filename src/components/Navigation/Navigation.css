@@ -5,3 +5,30 @@
   box-shadow: 0 3px 10px -8px rgba(0, 0, 0, 0.24);
   color: var(--polo-blue);
 }
+
+.navlink {
+  composes: plain from '../Link/Link.css';
+  margin-right: 30px;
+  position: relative;
+  transition: color .2s ease-out;
+  pointer-events: all;
+
+  &:hover {
+    color: var(--pattens-blue);
+  }
+}
+
+.active {
+  color: var(--pattens-blue);
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    background-color: var(--hawkes-blue);
+  }
+}

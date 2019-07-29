@@ -1,36 +1,60 @@
 import React from 'react';
-import ContentWrapper from '../ContentWrapper';
-import PageTitle from '../PageTitle';
+import { Switch, Route } from 'react-router-dom';
+
+import styles from './MainWrapper.css';
+
+import AverageOperationTime from '../AverageOperationTime';
 import Balance from '../Balance';
 import Banner from '../Banner';
-import Visitors from '../Visitors';
-import Score from '../Score';
+import ContentWrapper from '../ContentWrapper';
 import DataCenters from '../DataCenters';
 import LatestCommitsSection from '../LatestCommitsSection';
-import AverageOperationTime from '../AverageOperationTime';
-import WidgetsController from '../WidgetsController';
-import styles from './MainWrapper.css';
 import LatestProjectsSection from '../LatestProjectsSection';
+import navLinks from '../../fixtures/navLinks';
+import PageTitle from '../PageTitle';
+import Score from '../Score';
+import Visitors from '../Visitors';
+import WidgetsController from '../WidgetsController';
 
 const MainWrapper = () => (
-  <main>
-    <ContentWrapper>
-      <PageTitle />
-      <WidgetsController />
-      <section className={styles['medium-wrapper']}>
-        <Balance />
-        <Visitors />
-        <Score />
-        <Banner />
-      </section>
-      <section className={styles['large-wrapper']}>
-        <DataCenters />
-        <LatestCommitsSection />
-        <AverageOperationTime />
-      </section>
-      <LatestProjectsSection />
-    </ContentWrapper>
-  </main>
+  <ContentWrapper>
+    <PageTitle navLinks={navLinks}/>
+    <Switch>
+      <Route exact path='/' component={() => (
+        <>
+          <WidgetsController />
+          <section className={styles['medium-wrapper']}>
+            <Balance />
+            <Visitors />
+            <Score />
+            <Banner />
+          </section>
+          <section className={styles['large-wrapper']}>
+            <DataCenters />
+            <LatestCommitsSection />
+            <AverageOperationTime />
+          </section>
+        </>
+      )}/>
+      <Route path='/widgets' component={WidgetsController}/>
+      <Route path='/medium-grid' component={() => (
+        <section className={styles['medium-wrapper']}>
+          <Balance/>
+          <Visitors/>
+          <Score/>
+          <Banner/>
+        </section>
+      )}/>
+      <Route path='/large-grid' component={() => (
+        <section className={styles['large-wrapper']}>
+          <DataCenters />
+          <LatestCommitsSection/>
+          <AverageOperationTime/>
+        </section>
+      )}/>
+      <Route path='/latest-projects' component={LatestProjectsSection}/>
+    </Switch>
+  </ContentWrapper>
 );
 
 export default MainWrapper;
