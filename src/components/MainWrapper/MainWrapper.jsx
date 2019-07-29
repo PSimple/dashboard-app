@@ -8,6 +8,7 @@ import Score from '../Score';
 import DataCenters from '../DataCenters';
 import LatestCommitsSection from '../LatestCommitsSection';
 import AverageOperationTime from '../AverageOperationTime';
+import WidgetsController from '../WidgetsController';
 import styles from './MainWrapper.css';
 import LatestProjectsSection from '../LatestProjectsSection';
 
@@ -15,6 +16,7 @@ const MainWrapper = () => (
   <main>
     <ContentWrapper>
       <PageTitle />
+      <WidgetsController />
       <section className={styles['medium-wrapper']}>
         <Balance />
         <Visitors />

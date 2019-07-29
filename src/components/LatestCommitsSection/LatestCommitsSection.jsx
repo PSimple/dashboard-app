@@ -9,11 +9,11 @@ import Link from '../Link';
 const LatestCommitsSection = () => (
   <div className={styles.container}>
     <BlockHeader title='Lastest Commits'>
-      <IconButton className='info' onClick={() => {}}/>
-      <IconButton className='refresh' onClick={() => {}}/>
+      <IconButton type='info' onClick={() => {}}/>
+      <IconButton type='refresh' onClick={() => {}}/>
     </BlockHeader>
     <LatestCommitsTable />
-    <Link href="#" className='view-all'>VIEW ALL</Link>
+    <Link href="#" type='view-all'>VIEW ALL</Link>
   </div>
 );
 

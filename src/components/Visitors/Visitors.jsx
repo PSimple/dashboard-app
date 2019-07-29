@@ -8,8 +8,8 @@ import graph from '../../img/graph.png';
 const Visitors = () => (
   <div className={styles.container}>
     <BlockHeader title='Visitors'>
-      <IconButton className='info' onClick={() => {}}/>
-      <IconButton className='refresh' onClick={() => {}}/>
+      <IconButton type='info' onClick={() => {}}/>
+      <IconButton type='refresh' onClick={() => {}}/>
     </BlockHeader>
     <img src={graph} />
   </div>

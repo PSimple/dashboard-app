@@ -1,0 +1,25 @@
+.progressbar {
+  width: 148px;
+  height: 8px;
+  border-radius: 4px;
+  margin: 0 0 0 17px;
+  background-color: var(--botticelli);
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+}
+
+.short {
+  width: 134px;
+}
+
+.progress {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  background-color: var(--dodger-blue);
+  width: 0;
+  height: 8px;
+  border-radius: 4px;
+  transition: 0.5s all linear;
+}

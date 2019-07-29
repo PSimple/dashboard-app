@@ -27,7 +27,7 @@ const PageTitle = () => (
       <ul className={styles.breadcrumbs}>
         {linksData.map(item => (
           <li key={item.title} className={styles.item}>
-            <Link href={item.href} className='breadcrumb'>{item.title}</Link>
+            <Link href={item.href} type='breadcrumb'>{item.title}</Link>
           </li>
         ))}
       </ul>

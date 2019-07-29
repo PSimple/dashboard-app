@@ -6,8 +6,8 @@ import styles from './Balance.css';
 const Balance = () => (
   <div className={styles.container}>
     <BlockHeader title='Balance'>
-      <IconButton className='info' onClick={() => {}}/>
-      <IconButton className='refresh' onClick={() => {}}/>
+      <IconButton type='info' onClick={() => {}}/>
+      <IconButton type='refresh' onClick={() => {}}/>
     </BlockHeader>
     <div className={styles.sum}>
       $183,927
