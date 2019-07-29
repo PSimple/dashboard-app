@@ -11,7 +11,7 @@ const BlockHeader = ({ children, title }) => (
 );
 
 BlockHeader.propTypes = {
-  children: PropTypes.PropTypes.array,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.element]),
   title: PropTypes.string.isRequired,
 };
 

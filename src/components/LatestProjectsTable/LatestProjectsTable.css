@@ -1,0 +1,65 @@
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+}
+
+.head {
+  display: table-row;
+  background: rgba(66, 75, 95, 0.18);
+  color: var(--black-squeeze);
+}
+
+.cell {
+  display: table-cell;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--gull-gray);
+  vertical-align: middle;
+
+  &:first-child {
+    color: var(--black-squeeze);
+  }
+}
+
+.completed {
+  color: var(--malibu);
+}
+
+.started {
+  color: var(--black-squeeze);
+}
+
+.pending {
+  color: var(--heliotrope);
+}
+
+.canceled {
+  color: var(--pomegranate);
+}
+
+.head .cell {
+  color: var(--black-squeeze);
+}
+
+.row {
+  display: table-row;
+  border-bottom: 1px solid rgba(25, 29, 40, 0.51);
+
+  &:hover {
+    background-color: var(--ebony-clay);
+  }
+}
+
+.profile {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
