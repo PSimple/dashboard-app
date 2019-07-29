@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
+import PropTypes from 'prop-types';
 import fetchData from '../../functions/fetchData';
 import styles from './LatestProjectsTable.css';
 
@@ -51,6 +52,10 @@ const LatestProjectsTable = ({ image }) => {
       })}
     </div>
   );
+};
+
+LatestProjectsTable.propTypes = {
+  image: PropTypes.string,
 };
 
 export default LatestProjectsTable;
