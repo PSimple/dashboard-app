@@ -9,7 +9,7 @@ import image from '../../img/profile.png';
 const LatestProjectsSection = () => (
   <section className={styles.container}>
     <BlockHeader title='Latest Projects'>
-      <IconButton className='more' onClick={() => {}}/>
+      <IconButton type='more' onClick={() => {}}/>
     </BlockHeader>
     <LatestProjectsTable image={image} />
     <div className={styles.nav}>
