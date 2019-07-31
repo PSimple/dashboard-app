@@ -1,0 +1,5 @@
+@import "rc-select/assets/index.css";
+
+.selector {
+  min-width: 200px;
+}

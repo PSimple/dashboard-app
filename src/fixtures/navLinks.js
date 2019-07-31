@@ -19,6 +19,10 @@ const navLinks = [
     title: 'Latest Projects',
     route: '/latest-projects',
   },
+  {
+    title: 'Login Page',
+    route: '/login',
+  },
 ];
 
 export default navLinks;
