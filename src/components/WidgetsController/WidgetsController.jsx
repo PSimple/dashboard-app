@@ -5,7 +5,7 @@ import Widget from '../Widget';
 import Checkbox from './Checkbox';
 import Loader from '../Loader';
 import styles from './WodgetsController.css';
-import { fetchWidgetsData } from '../../actions';
+import fetchDataTo from '../../actions';
 
 const initialShowWidgets = {
   budget: true,
@@ -18,7 +18,7 @@ const WidgetsController = ({ data, loading, fetchData }) => {
   const [showWidgets, setShowWidgets] = useState(initialShowWidgets);
 
   useEffect(() => {
-    fetchData();
+    fetchData('widgets');
   }, []);
 
   return (
@@ -59,13 +59,15 @@ WidgetsController.propTypes = {
   fetchData: PropTypes.func,
 };
 
-const mapStateToProps = ({ widgets: { data, loading } }) => ({
-  data,
-  loading,
-});
+const mapStateToProps = ({
+  fetchReducer: {
+    widgets: { data, loading },
+  },
+}) => ({ data, loading });
+
 
 const mapDispatchToProps = {
-  fetchData: fetchWidgetsData,
+  fetchData: fetchDataTo,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(WidgetsController);

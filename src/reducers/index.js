@@ -1,10 +1,6 @@
 import { combineReducers } from 'redux';
-import widgets from './widgets';
-import latestCommits from './latestCommits';
-import projects from './projects';
+import fetchReducer from './fetchReducer';
 
 export default combineReducers({
-  widgets,
-  latestCommits,
-  projects,
+  fetchReducer,
 });

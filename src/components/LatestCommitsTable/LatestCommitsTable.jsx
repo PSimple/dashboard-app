@@ -4,12 +4,12 @@ import cn from 'classnames';
 import { connect } from 'react-redux';
 import Loader from '../Loader';
 import styles from './LatestCommitsTable.css';
-import { fetchLatestCommitsData } from '../../actions';
+import fetchDataTo from '../../actions';
 
 
 const LatestCommitsTable = ({ data, loading, fetchData }) => {
   useEffect(() => {
-    fetchData();
+    fetchData('commits');
   }, []);
 
   return (
@@ -34,13 +34,14 @@ LatestCommitsTable.propTypes = {
   fetchData: PropTypes.func,
 };
 
-const mapStateToProps = ({ latestCommits: { data, loading } }) => ({
-  data,
-  loading,
-});
+const mapStateToProps = ({
+  fetchReducer: {
+    commits: { data, loading },
+  },
+}) => ({ data, loading });
 
 const mapDispatchToProps = {
-  fetchData: fetchLatestCommitsData,
+  fetchData: fetchDataTo,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LatestCommitsTable);

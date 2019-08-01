@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Loader from '../Loader';
 import styles from './LatestProjectsTable.css';
-import { fetchProjectsData } from '../../actions';
+import fetchDataTo from '../../actions';
 
 const statuses = {
   0: 'Canceled',
@@ -20,7 +20,7 @@ const LatestProjectsTable = ({
   fetchData,
 }) => {
   useEffect(() => {
-    fetchData();
+    fetchData('projects');
   }, []);
   if (loading) {
     return (
@@ -66,13 +66,14 @@ LatestProjectsTable.propTypes = {
   image: PropTypes.string,
 };
 
-const mapStateToProps = ({ projects: { data, loading } }) => ({
-  data,
-  loading,
-});
+const mapStateToProps = ({
+  fetchReducer: {
+    projects: { data, loading },
+  },
+}) => ({ data, loading });
 
 const mapDispatchToProps = {
-  fetchData: fetchProjectsData,
+  fetchData: fetchDataTo,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LatestProjectsTable);
