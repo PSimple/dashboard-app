@@ -118,28 +118,27 @@ const Register = () => (
               </div>
             )}
           </Field>
-
           <div>
-          <label>Repository</label>
-          {repositoryList.map(option => (
-            <label key={option.value}>
-              <Field
-                name='repository'
-                type='radio'
-                value={option.value}
-                initialValue={option.value === 'github' ? option.value : undefined}
-              >
-                {({ input, meta }) => (
-                  <div>
-                    <input {...input}/>
-                    {meta.error && meta.touched && <span>{meta.error}</span>}
-                  </div>
-                )}
-              </Field>
-              {` ${option.value}`}
-            </label>
-          ))}
-        </div>
+            <label>Repository</label>
+            {repositoryList.map(option => (
+              <label key={option.value}>
+                <Field
+                  name='repository'
+                  type='radio'
+                  value={option.value}
+                  initialValue={option.value === 'github' ? option.value : undefined}
+                >
+                  {({ input, meta }) => (
+                    <div>
+                      <input {...input}/>
+                      {meta.error && meta.touched && <span>{meta.error}</span>}
+                    </div>
+                  )}
+                </Field>
+                {` ${option.value}`}
+              </label>
+            ))}
+          </div>
           <Field name="check" type='checkbox' initialValue={false}>
             {({ input, meta }) => (
               <div>
