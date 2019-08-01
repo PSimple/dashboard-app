@@ -3,6 +3,7 @@ import { Form, Field } from 'react-final-form';
 import '@babel/plugin-transform-runtime';
 import Select, { Option } from 'rc-select';
 import PropTypes from 'prop-types';
+import './Register.css';
 import 'rc-select/assets/index.css';
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -106,7 +107,7 @@ const Register = () => (
               <div>
                 <label>Select</label>
                 <Select
-                  style={{ width: 200 }}
+                  style={{ width: 365 }}
                   {...input}>
                   {levelsList.map(option => (
                     <Option key={option.value} value={option.value}>{option.value}</Option>
