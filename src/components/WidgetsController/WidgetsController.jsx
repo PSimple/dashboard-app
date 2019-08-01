@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Widget from '../Widget';
-import fetchData from '../../functions/fetchData';
 import Checkbox from './Checkbox';
 import Loader from '../Loader';
 import styles from './WodgetsController.css';
-
-const url = 'https://next.json-generator.com/api/json/get/VyJwF4-Mv';
+import { fetchWidgetsData } from '../../actions';
 
 const initialShowWidgets = {
   budget: true,
@@ -14,17 +14,11 @@ const initialShowWidgets = {
   progress: true,
 };
 
-const WidgetsController = () => {
+const WidgetsController = ({ data, loading, fetchData }) => {
   const [showWidgets, setShowWidgets] = useState(initialShowWidgets);
-  const [data, setData] = useState();
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    fetchData(url).then((fetchedData) => {
-      setData(fetchedData);
-      setLoading(false);
-    });
+    fetchData();
   }, []);
 
   return (
@@ -59,4 +53,19 @@ const WidgetsController = () => {
   );
 };
 
-export default WidgetsController;
+WidgetsController.propTypes = {
+  data: PropTypes.array,
+  loading: PropTypes.bool,
+  fetchData: PropTypes.func,
+};
+
+const mapStateToProps = ({ widgets: { data, loading } }) => ({
+  data,
+  loading,
+});
+
+const mapDispatchToProps = {
+  fetchData: fetchWidgetsData,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(WidgetsController);
