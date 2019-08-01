@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Field } from 'react-final-form';
 import Select, { Option } from 'rc-select';
 import styles from './LoginPage.css';
+import { levelOptions, repositoryOptions } from './options';
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -13,55 +14,28 @@ const onSubmit = async (values) => {
   return null;
 };
 
-const levelOptions = [
-  {
-    value: 'junior',
-    label: 'Junior',
-  },
-  {
-    value: 'middle',
-    label: 'Middle',
-  },
-  {
-    value: 'senior',
-    label: 'Senior',
-  },
-];
-
-const repositoryOptions = [
-  {
-    value: 'github',
-    label: 'Github',
-  },
-  {
-    value: 'gitlab',
-    label: 'Gitlab',
-  },
-  {
-    value: 'gitbucket',
-    label: 'Gitbucket',
-  },
-];
-
 const required = value => (value ? undefined : 'Required');
-const isPasswordsMatch = ({ password, 'confirm-password': confirmPassword }) => (
-  password === confirmPassword ? undefined : { 'confirm-password': "Don't match" }
+
+const isPasswordsMatch = (value, allValues) => (
+  value === allValues ? undefined : "Don't match"
 );
+
+const composeValidators = (...validators) => value =>
+  validators.reduce((error, validator) => error || validator(value), undefined);
 
 const LoginPage = () => (
   <Form
     onSubmit={onSubmit}
-    validate={isPasswordsMatch}
     render={({ handleSubmit, values }) => (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <Field
           name='login'
           validate={required}
         >
           {({ input, meta }) => (
-            <div>
-              <label>Login</label>
-              <input {...input} placeholder='Login'/>
+            <div className={styles.field}>
+              <label className={styles.label}>Login</label>
+              <input className={styles.text} {...input} placeholder='Login'/>
               {(meta.error || meta.submitError) && meta.touched
                 && <span>{meta.error || meta.submitError}</span>
               }
@@ -73,8 +47,8 @@ const LoginPage = () => (
           validate={required}
         >
           {({ input, meta }) => (
-            <div>
-              <label>Password</label>
+            <div className={styles.field}>
+              <label className={styles.label}>Password</label>
               <input {...input} placeholder='Password' type="password"/>
               {meta.error && meta.touched && <span>{meta.error}</span>}
             </div>
@@ -82,11 +56,11 @@ const LoginPage = () => (
         </Field>
         <Field
           name='confirm-password'
-          validate={required}
+          validate={composeValidators(required, isPasswordsMatch)}
         >
           {({ input, meta }) => (
-            <div>
-              <label>Confirm password</label>
+            <div className={styles.field}>
+              <label className={styles.label}>Confirm password</label>
               <input {...input} placeholder='Confirm-Password' type="password"/>
               {meta.error && meta.touched && <span>{meta.error}</span>}
             </div>
@@ -97,8 +71,8 @@ const LoginPage = () => (
           initialValue={levelOptions[0].value}
         >
           {({ input, meta }) => (
-            <div>
-              <label>Level</label>
+            <div className={styles.field}>
+              <label className={styles.label}>Level</label>
               <Select className={styles.selector} {...input}>
                 {levelOptions.map(option => (
                   <Option key={option.value} value={option.value}>{option.label}</Option>
@@ -114,15 +88,15 @@ const LoginPage = () => (
           value="accepted"
         >
           {({ input, meta }) => (
-            <div>
-              <label>Accept politics</label>
+            <div className={styles.field}>
+              <label className={styles.label}>Accept politics</label>
               <input {...input}/>
               {meta.error && meta.touched && <span>{meta.error}</span>}
             </div>
           )}
         </Field>
-        <div>
-          <label>Repository</label>
+        <div className={styles.field}>
+          <label className={styles.label}>Repository</label>
           {repositoryOptions.map(option => (
             <label key={option.value}>
               <Field
@@ -133,7 +107,7 @@ const LoginPage = () => (
               >
                 {({ input, meta }) => (
                   <div>
-                    <input {...input}/>
+                    <input className={styles.radio}{...input}/>
                     {meta.error && meta.touched && <span>{meta.error}</span>}
                   </div>
                 )}
@@ -143,6 +117,7 @@ const LoginPage = () => (
           ))}
         </div>
         <button
+          className={styles.button}
           disabled={!values.accepted || (values.accepted && !values.accepted.length)}
         >
           Submit
