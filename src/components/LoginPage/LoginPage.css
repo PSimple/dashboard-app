@@ -4,6 +4,12 @@
   min-width: 184px;
 }
 
+.input {
+  border-radius: 4px;
+  border: none;
+  color: var(--blue-haze);
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -11,25 +17,37 @@
 }
 
 .field {
+  position: relative;
   margin-bottom: 10px;
   width: 330px;
   display: flex;
   justify-content: space-between;
 }
 
-.label {
-
-}
-
 .text {
+  composes: input;
   background: rgba(0,0,0,0.14);
-  border-radius: 4px;
-  background-color: #6555C5;
-  border: 0;
+  padding-left: 7px;
+  height: 26px;
 }
 
 .button {
-  max-width: 150px;
+  composes: input;
+  width: 100px;
+  height: 30px;
+  background-color: var(--dodger-blue);
+
+  &:disabled {
+    color: white;
+    background-color: var(--blue-haze);
+  }
+}
+
+:global .rc-select-selection {
+  background-color: var(--ebony-clay-light);
+  border-radius: 4px;
+  border: none;
+  color: var(--blue-haze);
 }
 
 .radio {
@@ -37,4 +55,10 @@
   position: relative;
   transform: translateX(-50%);
   margin-bottom: 5px;
+}
+
+.error-message {
+  position: absolute;
+  left: 100%;
+  margin-left: 5px;
 }

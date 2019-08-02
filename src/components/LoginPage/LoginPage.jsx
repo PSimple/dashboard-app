@@ -17,11 +17,11 @@ const onSubmit = async (values) => {
 const required = value => (value ? undefined : 'Required');
 
 const isPasswordsMatch = (value, allValues) => (
-  value === allValues ? undefined : "Don't match"
+  value === allValues.password ? undefined : "Don't match"
 );
 
-const composeValidators = (...validators) => value =>
-  validators.reduce((error, validator) => error || validator(value), undefined);
+const composeValidators = (...validators) => (value, allValues) =>
+  validators.reduce((error, validator) => error || validator(value, allValues), undefined);
 
 const LoginPage = () => (
   <Form
@@ -37,7 +37,7 @@ const LoginPage = () => (
               <label className={styles.label}>Login</label>
               <input className={styles.text} {...input} placeholder='Login'/>
               {(meta.error || meta.submitError) && meta.touched
-                && <span>{meta.error || meta.submitError}</span>
+                && <span className={styles['error-message']}>{meta.error || meta.submitError}</span>
               }
             </div>
           )}
@@ -49,8 +49,8 @@ const LoginPage = () => (
           {({ input, meta }) => (
             <div className={styles.field}>
               <label className={styles.label}>Password</label>
-              <input {...input} placeholder='Password' type="password"/>
-              {meta.error && meta.touched && <span>{meta.error}</span>}
+              <input {...input} placeholder='Password' type="password" className={styles.text}/>
+              {meta.error && meta.touched && <span className={styles['error-message']} >{meta.error}</span>}
             </div>
           )}
         </Field>
@@ -61,8 +61,8 @@ const LoginPage = () => (
           {({ input, meta }) => (
             <div className={styles.field}>
               <label className={styles.label}>Confirm password</label>
-              <input {...input} placeholder='Confirm-Password' type="password"/>
-              {meta.error && meta.touched && <span>{meta.error}</span>}
+              <input {...input} placeholder='Confirm-Password' type="password" className={styles.text}/>
+              {meta.error && meta.touched && <span className={styles['error-message']}>{meta.error}</span>}
             </div>
           )}
         </Field>
