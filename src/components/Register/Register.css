@@ -35,22 +35,24 @@
   border-radius: 3px;
 }
 
-.input[type='checkbox'] {
+.checkbox {
   margin-top: 7px;
+  margin-left: 15px;
+  flex: 1;
 }
 
-.input[type='radio'] {
+.radio {
   margin-right: 10px;  
   margin-left: 18px;
 }
 
-.rc-select {
-  margin-left: 16px;
-}
-
-.radio {
+.radio-item {
   display: flex;
   align-items: center;
+}
+
+.rc-select {
+  margin-left: 16px;
 }
 
 .error {

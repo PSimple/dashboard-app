@@ -125,7 +125,7 @@ const Register = () => (
           <div className={styles.row}>
             <label className={styles.label}>Repository</label>
             {repositoryList.map(option => (
-                <div key={option.value} className={styles.radio}>
+                <div key={option.value} className={styles['radio-item']}>
                   <Field
                     name='repository'
                     type='radio'
@@ -134,7 +134,7 @@ const Register = () => (
                   >
                     {({ input, meta }) => (
                       <>
-                        <input {...input} className={styles.input}/>
+                        <input {...input} className={styles.radio}/>
                         {meta.error && meta.touched
                           && <span className={styles.error}>{meta.error}</span>
                           }
@@ -149,8 +149,8 @@ const Register = () => (
             {({ input, meta }) => (
               <div className={styles.row}>
                 <label className={styles.label}>Check</label>
-                <input {...input} className={styles.input} />
-                {meta.error && meta.touched && <span>{meta.error}</span>}
+                <input {...input} className={styles.checkbox} />
+                {meta.error && meta.touched && <span className={styles.error}>{meta.error}</span>}
               </div>
             )}
           </Field>
