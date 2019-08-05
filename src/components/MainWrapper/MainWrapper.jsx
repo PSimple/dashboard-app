@@ -10,6 +10,7 @@ import ContentWrapper from '../ContentWrapper';
 import DataCenters from '../DataCenters';
 import LatestCommitsSection from '../LatestCommitsSection';
 import LatestProjectsSection from '../LatestProjectsSection';
+import LoginPage from '../LoginPage';
 import navLinks from '../../fixtures/navLinks';
 import PageTitle from '../PageTitle';
 import Score from '../Score';
@@ -55,7 +56,11 @@ const MainWrapper = () => (
         </section>
       )}/>
       <Route path='/latest-projects' component={LatestProjectsSection}/>
+<<<<<<< HEAD
       <Route path='/register' component={Register}/>
+=======
+      <Route path='/login' component={LoginPage}/>
+>>>>>>> 3fb0b8f61f6e318f742a33d9912e017a7f0833eb
     </Switch>
   </ContentWrapper>
 );
