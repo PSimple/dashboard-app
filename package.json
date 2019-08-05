@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --ext .jsx,.js src/",
     "start": "parcel ./public/index.html",
     "build": "parcel build ./public/index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AntonBystryakov/dashboard-project.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn eslint"
+    }
   },
   "keywords": [],
   "author": "",
@@ -59,6 +65,7 @@
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.2"
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^3.0.2"
   }
 }
