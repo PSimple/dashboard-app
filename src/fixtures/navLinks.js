@@ -20,6 +20,10 @@ const navLinks = [
     route: '/latest-projects',
   },
   {
+    title: 'Register',
+    route: '/register',
+  },
+  {
     title: 'Login Page',
     route: '/login',
   },

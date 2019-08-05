@@ -16,6 +16,7 @@ import PageTitle from '../PageTitle';
 import Score from '../Score';
 import Visitors from '../Visitors';
 import WidgetsController from '../WidgetsController';
+import Register from '../Register';
 
 const MainWrapper = () => (
   <ContentWrapper>
@@ -55,6 +56,7 @@ const MainWrapper = () => (
         </section>
       )}/>
       <Route path='/latest-projects' component={LatestProjectsSection}/>
+      <Route path='/register' component={Register}/>
       <Route path='/login' component={LoginPage}/>
     </Switch>
   </ContentWrapper>
