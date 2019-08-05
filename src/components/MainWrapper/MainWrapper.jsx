@@ -35,6 +35,7 @@ const MainWrapper = () => (
             <LatestCommitsSection />
             <AverageOperationTime />
           </section>
+          <LatestProjectsSection />
         </>
       )}/>
       <Route path='/widgets' component={WidgetsController}/>

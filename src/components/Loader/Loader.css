@@ -28,3 +28,14 @@
   animation-duration: 1s;
 }
 
+.commits {
+  height: 266px;
+  width: 409px;
+  animation-duration: 1s;
+}
+
+.projects {
+  height: 342px;
+  width: 1092px;
+  animation-duration: 1s;
+}
