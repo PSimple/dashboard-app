@@ -40,10 +40,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-final-form": "^6.3.0",
-<<<<<<< HEAD
-=======
     "react-redux": "^7.1.0",
->>>>>>> 6656ef3acf9d9bf4866670135fabae5589d7be61
     "react-router-dom": "^5.0.1",
     "react-tooltip": "^3.10.0",
     "redux": "^4.0.4",
