@@ -77,13 +77,12 @@
   padding: 5px 15px;
   font-size: 16px;
   color: white;
+  background-image: linear-gradient(#4f93ce, #285f8f);
+  border: 1px solid #285f8f;
 
   &:visited {
     color: white;
   }
-
-  background-image: linear-gradient(#4f93ce, #285f8f);
-  border: 1px solid #285f8f;
 
   &:hover {
     background-image: linear-gradient(#4f93ce, #285f8f);
