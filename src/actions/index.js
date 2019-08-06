@@ -1,6 +1,6 @@
 import * as Actions from '../constants/actionTypes';
 import * as Urls from '../constants/urls';
-import fetchData from '../functions/fetchData';
+import fetchData from '../services/fetchData';
 
 const urlsTo = {
   commits: Urls.COMMITS_URL,
