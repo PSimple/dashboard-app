@@ -1,41 +1,48 @@
 import * as Actions from '../constants/actionTypes';
-import * as Urls from '../constants/urls';
-import fetchData from '../services/fetchData';
+import repositoryService from '../services/repositoryService';
 
-const urlsTo = {
-  commits: Urls.COMMITS_URL,
-  widgets: Urls.WIDGETS_URL,
-  projects: Urls.PROJECTS_URL,
+const getComponentData = (name) => {
+  switch (name) {
+    case 'widgets':
+      return repositoryService.getWidgets();
+    case 'commits':
+      return repositoryService.getCommits();
+    case 'projects':
+      return repositoryService.getProjects();
+    default:
+      return null;
+  }
 };
 
-const setLoadingTo = (place, isLoading) => ({
-  type: Actions.SET_LOADING_TO,
+const setComponentIsLoading = (componentName, isLoading) => ({
+  type: Actions.SET_COMPONENT_IS_LOADING,
   payload: {
-    place,
+    componentName,
     isLoading,
   },
 });
 
-const setDataTo = (place, data) => ({
-  type: Actions.SET_DATA_TO,
+const setComponentData = (componentName, data) => ({
+  type: Actions.SET_COMPONENT_DATA,
   payload: {
-    place,
+    componentName,
     data,
   },
 });
 
-const fetchDataTo = place => (
+const fetchComponentData = componentName => (
   (dispatch) => {
-    dispatch(setLoadingTo(place, true));
-    return fetchData(urlsTo[place]).then(
-      data => dispatch(setDataTo(place, data)),
+    dispatch(setComponentIsLoading(componentName, true));
+
+    return getComponentData(componentName).then(
+      data => dispatch(setComponentData(componentName, data)),
       (error) => {
         throw error;
       },
     ).finally(
-      () => dispatch(setLoadingTo(place, false)),
+      () => dispatch(setComponentIsLoading(componentName, false)),
     );
   }
 );
 
-export default fetchDataTo;
+export default fetchComponentData;

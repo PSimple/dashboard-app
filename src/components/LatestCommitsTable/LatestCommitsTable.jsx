@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { connect } from 'react-redux';
 import Loader from '../Loader';
 import styles from './LatestCommitsTable.css';
-import fetchDataTo from '../../actions';
+import fetchComponentData from '../../actions';
 
 
 const LatestCommitsTable = ({ data, loading, fetchData }) => {
@@ -41,7 +41,7 @@ const mapStateToProps = ({
 }) => ({ data, loading });
 
 const mapDispatchToProps = {
-  fetchData: fetchDataTo,
+  fetchData: fetchComponentData,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LatestCommitsTable);

@@ -1,14 +1,12 @@
 import axios from 'axios';
-import fetchData from '../src/services/fetchData';
-import widgetsData from '../src/fixtures/widgetsData.json';
+import clientApi from '../src/services/clientApi';
 
 jest.mock('axios');
 
-describe('test describe', () => {
-  test('test test', () => {
-    const resp = { data: widgetsData };
-    axios.get.mockResolvedValue(resp);
 
-    return fetchData('../src/fixtures/widgetsData.json').then(data => expect(data).toEqual(widgetsData));
+describe('clientApi test suite', () => {
+  test('clientApi get method should call axios get', () => {
+    clientApi.get('');
+    expect(axios.get).toBeCalled();
   });
 });

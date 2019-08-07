@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Loader from '../Loader';
 import styles from './LatestProjectsTable.css';
-import fetchDataTo from '../../actions';
+import fetchComponentData from '../../actions';
 
 const statuses = {
   0: 'Canceled',
@@ -73,7 +73,7 @@ const mapStateToProps = ({
 }) => ({ data, loading });
 
 const mapDispatchToProps = {
-  fetchData: fetchDataTo,
+  fetchData: fetchComponentData,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LatestProjectsTable);
