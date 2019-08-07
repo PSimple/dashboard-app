@@ -21,9 +21,7 @@ const isPasswordsMatch = (value, allValues) => (
 );
 
 const composeValidators = (...validators) =>
-  // eslint-disable-next-line implicit-arrow-linebreak
   (value, allValues) =>
-    // eslint-disable-next-line implicit-arrow-linebreak
     validators.reduce((error, validator) => error || validator(value, allValues), undefined);
 
 const LoginPage = () => (
