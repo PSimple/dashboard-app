@@ -20,8 +20,9 @@ const isPasswordsMatch = (value, allValues) => (
   value === allValues.password ? undefined : "Don't match"
 );
 
-const composeValidators = (...validators) => (value, allValues) =>
-  validators.reduce((error, validator) => error || validator(value, allValues), undefined);
+const composeValidators = (...validators) =>
+  (value, allValues) =>
+    validators.reduce((error, validator) => error || validator(value, allValues), undefined);
 
 const LoginPage = () => (
   <Form
@@ -35,7 +36,7 @@ const LoginPage = () => (
           {({ input, meta }) => (
             <div className={styles.field}>
               <label className={styles.label}>Login</label>
-              <input className={styles.text} {...input} placeholder='Login'/>
+              <input className={styles.text} {...input} placeholder='Login' />
               {(meta.error || meta.submitError) && meta.touched
                 && <span className={styles['error-message']}>{meta.error || meta.submitError}</span>
               }
@@ -49,7 +50,7 @@ const LoginPage = () => (
           {({ input, meta }) => (
             <div className={styles.field}>
               <label className={styles.label}>Password</label>
-              <input {...input} placeholder='Password' type="password" className={styles.text}/>
+              <input {...input} placeholder='Password' type="password" className={styles.text} />
               {meta.error && meta.touched && <span className={styles['error-message']} >{meta.error}</span>}
             </div>
           )}
@@ -61,7 +62,7 @@ const LoginPage = () => (
           {({ input, meta }) => (
             <div className={styles.field}>
               <label className={styles.label}>Confirm password</label>
-              <input {...input} placeholder='Confirm-Password' type="password" className={styles.text}/>
+              <input {...input} placeholder='Confirm-Password' type="password" className={styles.text} />
               {meta.error && meta.touched && <span className={styles['error-message']}>{meta.error}</span>}
             </div>
           )}
@@ -90,7 +91,7 @@ const LoginPage = () => (
           {({ input, meta }) => (
             <div className={styles.field}>
               <label className={styles.label}>Accept politics</label>
-              <input {...input}/>
+              <input {...input} />
               {meta.error && meta.touched && <span>{meta.error}</span>}
             </div>
           )}
@@ -107,7 +108,7 @@ const LoginPage = () => (
               >
                 {({ input, meta }) => (
                   <div>
-                    <input className={styles.radio}{...input}/>
+                    <input className={styles.radio}{...input} />
                     {meta.error && meta.touched && <span>{meta.error}</span>}
                   </div>
                 )}

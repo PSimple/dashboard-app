@@ -5,7 +5,7 @@ import Widget from '../Widget';
 import Checkbox from './Checkbox';
 import Loader from '../Loader';
 import styles from './WodgetsController.css';
-import fetchDataTo from '../../actions';
+import fetchComponentData from '../../actions';
 
 const initialShowWidgets = {
   budget: true,
@@ -41,11 +41,11 @@ const WidgetsController = ({ data, loading, fetchData }) => {
       </ul>
       <div className={styles.container}>
         {loading && Object.keys(showWidgets).map(
-          item => <Loader key={item} type='widget'/>,
+          item => <Loader key={item} type='widget' />,
         )}
         {data && data.map(
           widget => (
-            showWidgets[widget.type] && <Widget key={widget.type} data={widget}/>
+            showWidgets[widget.type] && <Widget key={widget.type} data={widget} />
           ),
         )}
       </div>
@@ -67,7 +67,7 @@ const mapStateToProps = ({
 
 
 const mapDispatchToProps = {
-  fetchData: fetchDataTo,
+  fetchData: fetchComponentData,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(WidgetsController);

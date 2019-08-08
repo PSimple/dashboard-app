@@ -4,13 +4,20 @@
   "description": "this is education repository",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "eslint": "eslint --ext .jsx,.js src/ __tests__",
     "start": "parcel ./public/index.html",
     "build": "parcel build ./public/index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AntonBystryakov/dashboard-project.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn eslint",
+      "pre-push": "yarn test"
+    }
   },
   "keywords": [],
   "author": "",
@@ -21,6 +28,7 @@
   "homepage": "https://github.com/AntonBystryakov/dashboard-project#readme",
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "autoprefixer": "^9.6.1",
     "axios": "^0.19.0",
     "babel-polyfill": "^6.26.0",
@@ -58,7 +66,10 @@
     "eslint-config-airbnb": "17.1.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.14.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.2"
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^3.0.2",
+    "jest": "^24.8.0"
   }
 }

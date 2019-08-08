@@ -1,6 +1,6 @@
 import {
-  SET_LOADING_TO,
-  SET_DATA_TO,
+  SET_COMPONENT_IS_LOADING,
+  SET_COMPONENT_DATA,
 } from '../constants/actionTypes';
 
 const initialState = {
@@ -25,20 +25,20 @@ const fetchReducer = (state = initialState, action) => {
   } = action;
 
   switch (type) {
-    case SET_LOADING_TO:
+    case SET_COMPONENT_IS_LOADING:
       return {
         ...state,
-        [payload.place]: {
-          ...state[payload.place],
+        [payload.componentName]: {
+          ...state[payload.componentName],
           loading: payload.isLoading,
         },
       };
 
-    case SET_DATA_TO:
+    case SET_COMPONENT_DATA:
       return {
         ...state,
-        [payload.place]: {
-          ...state[payload.place],
+        [payload.componentName]: {
+          ...state[payload.componentName],
           data: payload.data,
         },
       };

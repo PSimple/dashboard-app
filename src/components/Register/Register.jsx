@@ -8,9 +8,8 @@ import 'rc-select/assets/index.css';
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-const onSubmit = async (values) => {
+const onSubmit = async () => {
   await sleep(300);
-  window.alert(JSON.stringify(values, 0, 2));
 };
 
 const usernameAvailable = async (value) => {
@@ -47,36 +46,36 @@ const levelsList = [
 
 const Register = () => (
   <Form
-      onSubmit={onSubmit}
-      validate={(values) => {
-        const errors = {};
-        if (!values.username) {
-          errors.username = 'Required';
-        }
-        if (!values.password) {
-          errors.password = 'Required';
-        }
-        if (!values.confirm) {
-          errors.confirm = 'Required';
-        } else if (values.confirm !== values.password) {
-          errors.confirm = 'Must match';
-        }
-        if (!values.check) {
-          errors.check = 'Required';
-        }
-        if (!values.select) {
-          errors.select = 'Required';
-        }
-        return errors;
-      }}
-      render={({
-        handleSubmit, values,
-      }) => (
+    onSubmit={onSubmit}
+    validate={(values) => {
+      const errors = {};
+      if (!values.username) {
+        errors.username = 'Required';
+      }
+      if (!values.password) {
+        errors.password = 'Required';
+      }
+      if (!values.confirm) {
+        errors.confirm = 'Required';
+      } else if (values.confirm !== values.password) {
+        errors.confirm = 'Must match';
+      }
+      if (!values.check) {
+        errors.check = 'Required';
+      }
+      if (!values.select) {
+        errors.select = 'Required';
+      }
+      return errors;
+    }}
+    render={({
+      handleSubmit, values,
+    }) => (
         <form
           onSubmit={handleSubmit}
           className={styles.register}
         >
-          <Field name="username"validate={usernameAvailable}>
+          <Field name="username" validate={usernameAvailable}>
             {({ input, meta }) => (
               <div className={styles.row}>
                 <label className={styles.label}>Username</label>
@@ -125,24 +124,24 @@ const Register = () => (
           <div className={styles.row}>
             <label className={styles.label}>Repository</label>
             {repositoryList.map(option => (
-                <div key={option.value} className={styles['radio-item']}>
-                  <Field
-                    name='repository'
-                    type='radio'
-                    value={option.value}
-                    initialValue='github'
-                  >
-                    {({ input, meta }) => (
-                      <>
-                        <input {...input} className={styles.radio}/>
-                        {meta.error && meta.touched
-                          && <span className={styles.error}>{meta.error}</span>
-                          }
-                      </>
-                    )}
-                  </Field>
-                  {` ${option.value}`}
-                </div>
+              <div key={option.value} className={styles['radio-item']}>
+                <Field
+                  name='repository'
+                  type='radio'
+                  value={option.value}
+                  initialValue='github'
+                >
+                  {({ input, meta }) => (
+                    <>
+                      <input {...input} className={styles.radio} />
+                      {meta.error && meta.touched
+                        && <span className={styles.error}>{meta.error}</span>
+                      }
+                    </>
+                  )}
+                </Field>
+                {` ${option.value}`}
+              </div>
             ))}
           </div>
           <Field name="check" type='checkbox' initialValue={false}>
@@ -161,8 +160,8 @@ const Register = () => (
           </div>
           <pre>{JSON.stringify(values, 0, 2)}</pre>
         </form>
-      )}
-    />
+    )}
+  />
 );
 
 Register.propTypes = {
