@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { observer } from 'mobx-react-lite';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Widget from '../Widget';
@@ -6,16 +7,13 @@ import Checkbox from './Checkbox';
 import Loader from '../Loader';
 import styles from './WodgetsController.css';
 import fetchComponentData from '../../actions';
+import WidgetsStore from '../../store';
 
-const initialShowWidgets = {
-  budget: true,
-  operations: true,
-  requests: true,
-  progress: true,
-};
-
-const WidgetsController = ({ data, loading, fetchData }) => {
-  const [showWidgets, setShowWidgets] = useState(initialShowWidgets);
+const WidgetsController = observer(({
+  data, loading, fetchData,
+}) => {
+  const { showWidgets, setShowWidget } = useContext(WidgetsStore);
+  console.log(showWidgets);
 
   useEffect(() => {
     fetchData('widgets');
@@ -29,12 +27,7 @@ const WidgetsController = ({ data, loading, fetchData }) => {
             <Checkbox
               label={widget.type}
               selected={showWidgets[widget.type]}
-              handleChange={
-                () => setShowWidgets({
-                  ...showWidgets,
-                  [widget.type]: !showWidgets[widget.type],
-                })
-              }
+              handleChange={() => setShowWidget(widget.type, !showWidgets[widget.type])}
             />
           </li>
         ))}
@@ -51,7 +44,7 @@ const WidgetsController = ({ data, loading, fetchData }) => {
       </div>
     </>
   );
-};
+});
 
 WidgetsController.propTypes = {
   data: PropTypes.array,
